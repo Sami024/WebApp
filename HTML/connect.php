@@ -2,7 +2,7 @@
 $host = '172.18.0.2';
 $user = 'admin';
 $pass = 'admin';
-$db = '';
+$db = 'gerechten';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
