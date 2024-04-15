@@ -4,6 +4,9 @@ services:
   web:
     image: php:8.0-apache
     container_name: php_web
+    build:
+      context:  .
+      dockerfile: Dockerfile-php
     restart: always
     ports:
       - "8000:80"
@@ -35,6 +38,7 @@ services:
     environment:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: rootpassword
+
     depends_on:
       - db
 
