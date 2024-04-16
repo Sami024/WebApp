@@ -37,3 +37,4 @@ die(" Sorry Database is not connected. Please try again later.");
     $result = $stmt->fetch();
     print_r($result);
 }
+//iets uit je database halen en opvragen
