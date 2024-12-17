@@ -1,2 +1,2 @@
-# Web-applicatie1
+# WebApp
  Website voor een restaurant
