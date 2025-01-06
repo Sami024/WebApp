@@ -17,7 +17,7 @@ services:
 
   db:
     # Bart beun oplossing voor MAC OS
-    # platform: linux/x86_64
+    platform: linux/x86_64
     image: mysql:5.7
     container_name: mysql_db
     restart: always
