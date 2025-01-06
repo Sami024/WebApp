@@ -119,7 +119,7 @@
                 </main>
 
                 <!--=============== MAIN JS ===============-->
-                <script src="../js/main.js"></script>
+                <script src="main.js"></script>
     </body>
 
 </html>
