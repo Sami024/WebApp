@@ -1,16 +1,22 @@
+<?php
+    require_once("connect.php");
+   /**
+    * @var PDO $connect
+    */
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twist Food</title>
-    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
 <head>
 <body>
 <header class="header" id="header">
 <nav class="nav container">
-    <a href="../IMG/1598562279236_Twist-Food_Logo-1.png" class="nav__logo">Logo</a>
+    <a href="../assets/images/1598562279236_Twist-Food_Logo-1.png" class="nav__logo">Logo</a>
     <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
             <li class="nav__item">
@@ -102,6 +108,7 @@
 </main>
 
 <!--=============== MAIN JS ===============-->
-<script src="../js/main.js"></script>
+<script src="../assets/js/main.js"></script>
 </body>
 </html>
+
