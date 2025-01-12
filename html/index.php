@@ -1,7 +1,7 @@
 <?php
 $dsn = 'mysql:host=localhost;dbname=restaurant';
 $dbusername = 'root';
-$dbpassword = 'rootpassword';
+$dbpassword = '';
 
 try {
     $pdo = new PDO($dsn, $dbusername, $dbpassword);
@@ -31,7 +31,7 @@ try {
     <div class="container">
         <div class="logo">
 
-            <img src="../web-design-course-restaurant-master/images/1598562279236_Twist-Food_Logo-1.png"
+            <img src="images/1598562279236_Twist-Food_Logo-1.png"
                 alt="Restaurant Logo" class="img-responsive">
         </div>
 
@@ -107,7 +107,7 @@ try {
  $query = "SELECT * FROM food";
  $result = $pdo->query($query);
  while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-     echo "<div class='pizza'>";
+     echo "<div class='food-menu-box'>";
      echo "<h4>" . htmlspecialchars($row['naam']) . "</h4>";
      echo "<h5>Ingredienten : </h5>";
      echo "<p>" . htmlspecialchars($row['ingredienten']) . "</p>";
