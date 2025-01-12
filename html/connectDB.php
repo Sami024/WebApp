@@ -1,9 +1,7 @@
 <?php
-
-
 $dsn = 'mysql:host=localhost;dbname=restaurant';
-$dbusername = 'root';
-$dbpassword = '';
+$dbusername = 'user';
+$dbpassword = 'password';
 
 try {
     $pdo = new PDO($dsn, $dbusername, $dbpassword);
@@ -13,5 +11,10 @@ try {
     echo "Connection failed: " . $e->getMessage();
     echo "wa ra mageddamsch ha schi";
 }
-
 ?>
+
+
+
+
+
+
