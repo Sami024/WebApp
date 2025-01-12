@@ -12,6 +12,10 @@
 
   /* Header start here -----------------------------------------------------------------------------------------*/
 }
+body {
+  height: 100vh;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -59,7 +63,7 @@ ul li a:hover {
   color: white;
 }
 /* ------------------------------------------------------------------------------------------------------------ */
-/* <!-- fOOD sEARCH Section Starts Here -->-------------------------------------------------------------------- */
+/* <!-- fOOD SEARCH Section Starts Here -->-------------------------------------------------------------------- */
 
 .container1 {
   width: 40%;
@@ -86,7 +90,6 @@ form {
   background-repeat: no-repeat;
   background-position: center;
   padding: 7% 0;
-  
 }
 
 .food-search input[type="search"] {
@@ -99,8 +102,7 @@ form {
   background-color: white;
 }
 
-
-/* <!-- fOOD sEARCH Section Ends Here -->---------------------------------------------------------------------- */
+/* <!-- fOOD SEARCH Section Ends Here -->---------------------------------------------------------------------- */
 
 /* <!-- Categories Section Starts Here  -->-------------------------------------------------------------------- */
 .container2 {
@@ -108,7 +110,7 @@ form {
   margin: 0 auto;
   height: 35%;
   padding: 1%;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -124,7 +126,6 @@ form {
   width: 15rem;
   margin: 2%;
   text-align: center;
-  
 }
 /*  <!-- Categories Section Ends Here-------------------------------------------------------------------------- */
 a {
@@ -159,51 +160,38 @@ h3 {
   color: black;
 }
 
-
-/* fieldset{
-    border: 1px solid white;
-    margin: 5%;
-    padding: 3%;
-    border-radius: 5px;
-}  */
-
-/* CSSS for navbar section */
-
-/* .menu {
-  line-height: 20px;
-} */
-
-
-/* CSS for Food SEarch Section */
-
-
-
-/* CSS for Categories */
-
-
 /* CSS for Food Menu */
 .food-menu {
   background-color: #ececec;
   padding: 4% 0;
 }
 .food-menu-box {
-  width: 20%;
+  min-width: 45%;
+  height: 120px;
+  background-color: rgb(204, 212, 207);
+  border: 2px solid black;
+  text-align: center;
+  border-radius: 20px;
+  /* margin-right: 20px; */
+  /* margin: 20px auto; */
+  /* width: 20%;
   margin: 1%;
   padding: 2%;
   /* float: left; */
-  background-color: white;
-  border-radius: 15px;
+  /* background-color: white;
+  border-radius: 15px; */
 }
-
-.food-menu-img {
-  width: 20%;
-  float: left;
-}
-
-.food-menu-desc {
-  width: 70%;
-  float: left;
-  margin-left: 8%;
+.container3 {
+  width: 95%;
+  padding: 1%;
+  height: 300px;
+  border: 2px solid green;
+  gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #3ce176;
+  border-radius: 20px;
+  flex-wrap: wrap;
 }
 
 .food-price {
@@ -220,15 +208,11 @@ h3 {
   list-style-type: none;
 }
 .social ul li {
-  display: inline;
+  /* display: inline; */
   padding: 1%;
 }
 
 /* for Order Section */
-.order {
-  width: 50%;
-  margin: 0 auto;
-}
 .input-responsive {
   width: 96%;
   padding: 1%;
@@ -236,10 +220,6 @@ h3 {
   border: none;
   border-radius: 5px;
   font-size: 1rem;
-}
-.order-label {
-  margin-bottom: 1%;
-  font-weight: bold;
 }
 /* -----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------- */
