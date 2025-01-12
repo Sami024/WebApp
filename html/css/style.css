@@ -1,0 +1,312 @@
+/* 
+    Author: Sami 
+    Theme: Restaurant Food Order;
+    version: 1.0;
+*/
+
+/* CSS for All */
+* {
+  margin: 0 0;
+  padding: 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* Header start here -----------------------------------------------------------------------------------------*/
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ebeaef;
+}
+.logo {
+  width: 5%;
+  height: 100%;
+}
+ul {
+  width: 30%;
+  text-align: right;
+  list-style-type: none;
+  line-height: 15px;
+  margin-right: 50px;
+  font-weight: bold;
+  font-size: large;
+}
+
+ul li {
+  display: inline;
+  padding: 2%;
+}
+ul li a:hover {
+  color: #6947ff;
+  font-size: large;
+}
+
+/* Header ends here -------------------------------------------------------------------------------------------*/
+
+.img-responsive {
+  width: 100%;
+}
+.img-curve {
+  border-radius: 15px;
+}
+.text-center {
+  text-align: center;
+}
+.text-white {
+  color: white;
+}
+/* ------------------------------------------------------------------------------------------------------------ */
+/* <!-- fOOD sEARCH Section Starts Here -->-------------------------------------------------------------------- */
+
+.container1 {
+  width: 40%;
+  margin: 0 auto;
+  padding: 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+}
+form {
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+  padding: 1%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 20px;
+}
+.food-search {
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 7% 0;
+  
+}
+
+.food-search input[type="search"] {
+  width: 100%;
+  height: 50px;
+  padding: 1%;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+}
+
+
+/* <!-- fOOD sEARCH Section Ends Here -->---------------------------------------------------------------------- */
+
+/* <!-- Categories Section Starts Here  -->-------------------------------------------------------------------- */
+.container2 {
+  width: 95%;
+  margin: 0 auto;
+  height: 100%;
+  padding: 1%;
+  border: 2px solid green;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #3ce176;
+  border-radius: 20px;
+}
+.categories {
+  padding: 0;
+  margin-top: 5px;
+}
+
+.box-3 {
+  width: 15rem;
+  margin: 2%;
+  text-align: center;
+  
+}
+/*  <!-- Categories Section Ends Here-------------------------------------------------------------------------- */
+a {
+  color: #ff6b81;
+  text-decoration: none;
+}
+
+.btn {
+  padding: 1%;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+.btn-primary {
+  background-color: #ff6b81;
+  color: white;
+  cursor: pointer;
+  border-radius: 40px;
+  margin-left: 10px;
+}
+.btn-primary:hover {
+  color: white;
+  background-color: #ff4757;
+}
+h2 {
+  color: #2f3542;
+  font-size: 2rem;
+  /* margin-bottom: 2%; */
+}
+h3 {
+  font-size: 1.5rem;
+  color: black;
+}
+
+
+/* fieldset{
+    border: 1px solid white;
+    margin: 5%;
+    padding: 3%;
+    border-radius: 5px;
+}  */
+
+/* CSSS for navbar section */
+
+/* .menu {
+  line-height: 20px;
+} */
+
+
+/* CSS for Food SEarch Section */
+
+
+
+/* CSS for Categories */
+
+
+/* CSS for Food Menu */
+.food-menu {
+  background-color: #ececec;
+  padding: 4% 0;
+}
+.food-menu-box {
+  width: 43%;
+  margin: 1%;
+  padding: 2%;
+  float: left;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.food-menu-img {
+  width: 20%;
+  float: left;
+}
+
+.food-menu-desc {
+  width: 70%;
+  float: left;
+  margin-left: 8%;
+}
+
+.food-price {
+  font-size: 1.2rem;
+  margin: 2% 0;
+}
+.food-detail {
+  font-size: 1rem;
+  color: #747d8c;
+}
+
+/* CSS for Social */
+.social ul {
+  list-style-type: none;
+}
+.social ul li {
+  display: inline;
+  padding: 1%;
+}
+
+/* for Order Section */
+.order {
+  width: 50%;
+  margin: 0 auto;
+}
+.input-responsive {
+  width: 96%;
+  padding: 1%;
+  margin-bottom: 3%;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.order-label {
+  margin-bottom: 1%;
+  font-weight: bold;
+}
+/* -----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------- */
+/* CSS for Mobile Size or Smaller Screen */
+
+@media only screen and (max-width: 768px) {
+  .logo {
+    width: 10%;
+    margin-left: 10px;
+  }
+
+  .menu ul {
+    text-align: center;
+    display: inline-block;
+  }
+
+  .food-search input[type="search"] {
+    width: 80%;
+    padding: 2%;
+    /* margin-bottom: 3%; */
+  }
+
+  .btn {
+    width: 20%;
+    padding: 2%;
+  }
+
+  .food-search {
+    padding: 10% 0;
+  }
+
+  .categories {
+    /* width: 10%; */
+    margin-bottom: 0;
+  }
+  h2 {
+    margin-bottom: 10%;
+  }
+  .box-3 {
+    width: 100%;
+    margin: 4% auto;
+  }
+
+  .food-menu {
+    padding: 20% 0;
+  }
+
+  .food-menu-box {
+    width: 90%;
+    padding: 5%;
+    margin-bottom: 5%;
+  }
+  .social {
+    padding: 5% 0;
+  }
+  .order {
+    width: 100%;
+  }
+  .container1 {
+    width: 90%;
+    margin: auto;
+    padding: 1%;
+    border: 2px solid green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3ce176;
+    border-radius: 20px;
+  }
+}

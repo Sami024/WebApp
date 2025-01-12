@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <!-- Important to make website responsive -->
@@ -13,33 +12,40 @@
 
 <body>
     <!-- Navbar Section Starts Here -->
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" title="Logo">
+                    <img src="images/logo.png" alt="Restaurant Logo" class="img-responsive">
+                </a>
+            </div>
 
-    <div class="container">
-        <div class="logo">
+            <div class="menu text-right">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="categories.html">Categories</a>
+                    </li>
+                    <li>
+                        <a href="foods.html">Foods</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
 
-            <img src="../web-design-course-restaurant-master/images/1598562279236_Twist-Food_Logo-1.png"
-                alt="Restaurant Logo" class="img-responsive">
+            <div class="clearfix"></div>
         </div>
-
-        <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="foods.html">Foods</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
-    </div>
-
+    </section>
     <!-- Navbar Section Ends Here -->
 
     <!-- fOOD sEARCH Section Starts Here -->
     <section class="food-search text-center">
-        <div class="container1">
-
+        <div class="container">
+            
             <form action="food-search.html" method="POST">
                 <input type="search" name="search" placeholder="Search for Food.." required>
                 <input type="submit" name="submit" value="Search" class="btn btn-primary">
@@ -49,64 +55,19 @@
     </section>
     <!-- fOOD sEARCH Section Ends Here -->
 
-    <!-- Categories Section Starts Here  -->
-    <section class="categories">
-
-        <h2 class="text-center">Explore Foods</h2>
-        <div class="container2">
 
 
-            <a href="category-foods.html">
-                <div class="box-3 ">
-                    <img src="images/pizza.jpg" alt="Pizza" class="img-responsive img-curve">
-
-                    <h3 class="text-black">Pizza</h3>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="box-3 ">
-                    <img src="images/burger.jpg" alt="Burger" class="img-responsive img-curve">
-
-                    <h3 class="text-black">Broodjes</h3>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="box-3 ">
-                    <img src="images/momo.jpg" alt="Momo" class="img-responsive img-curve">
-
-                    <h3 class="text-black ">Schotels</h3>
-                </div>
-            </a>
-
-        </div>
-    </section>
-    <!-- Categories Section Ends Here
-
-    <!- fOOD MEnu Section Starts Here -->
+    <!-- fOOD MEnu Section Starts Here -->
     <section class="food-menu">
-        <h2 class="text-center">Food Menu</h2>
         <div class="container">
-<?php
-require_once 'connectDB.php';
+            <h2 class="text-center">Food Menu</h2>
 
- $query = "SELECT * FROM food";
- $result = $pdo->query($query);
- while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-     echo "<div class='pizza'>";
-     echo "<h4>" . htmlspecialchars($row['naam']) . "</h4>";
-     echo "<h5>Ingredienten : </h5>";
-     echo "<p>" . htmlspecialchars($row['ingredienten']) . "</p>";
-     echo "</div>";
- }
-?>
-</div>
-</section>
+            <div class="food-menu-box">
+                <div class="food-menu-img">
+                    <img src="images/menu-pizza.jpg" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                </div>
 
-
-                <!-- <div class="food-menu-box">
-                   <div class="food-menu-desc">
+                <div class="food-menu-desc">
                     <h4>Food Title</h4>
                     <p class="food-price">$2.3</p>
                     <p class="food-detail">
@@ -114,12 +75,12 @@ require_once 'connectDB.php';
                     </p>
                     <br>
 
-                    <a href="order.html" class="btn btn-primary">Order Now</a>
+                    <a href="#" class="btn btn-primary">Order Now</a>
                 </div>
             </div>
 
-            <div class="food-menu-box"> -->
-                <!-- <div class="food-menu-img">
+            <div class="food-menu-box">
+                <div class="food-menu-img">
                     <img src="images/menu-burger.jpg" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
                 </div>
 
@@ -202,12 +163,15 @@ require_once 'connectDB.php';
                     <a href="#" class="btn btn-primary">Order Now</a>
                 </div>
             </div>
+
+
             <div class="clearfix"></div>
+
+            
+
         </div>
-        <p class="text-center">
-            <a href="#">See All Foods</a>
-        </p>
-    </section> -->
+
+    </section>
     <!-- fOOD Menu Section Ends Here -->
 
     <!-- social Section Starts Here -->
@@ -215,13 +179,13 @@ require_once 'connectDB.php';
         <div class="container text-center">
             <ul>
                 <li>
-                    <a href="#"><img src="https://img.icons8.com/fluent/50/000000/facebook-new.png" /></a>
+                    <a href="#"><img src="https://img.icons8.com/fluent/50/000000/facebook-new.png"/></a>
                 </li>
                 <li>
-                    <a href="#"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png" /></a>
+                    <a href="#"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a>
                 </li>
                 <li>
-                    <a href="#"><img src="https://img.icons8.com/fluent/48/000000/twitter.png" /></a>
+                    <a href="#"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
                 </li>
             </ul>
         </div>
@@ -231,11 +195,10 @@ require_once 'connectDB.php';
     <!-- footer Section Starts Here -->
     <section class="footer">
         <div class="container text-center">
-            <p>All rights reserved. Designed By <a href="#">Sami Benouari</a></p>
+            <p>All rights reserved. Designed By <a href="#">Vijay Thapa</a></p>
         </div>
     </section>
     <!-- footer Section Ends Here -->
 
 </body>
-
 </html>
