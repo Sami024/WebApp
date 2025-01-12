@@ -1,3 +1,17 @@
+<?php
+$dsn = 'mysql:host=localhost;dbname=restaurant';
+$dbusername = 'root';
+$dbpassword = 'rootpassword';
+
+try {
+    $pdo = new PDO($dsn, $dbusername, $dbpassword);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connection successful!";
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -89,7 +103,6 @@
         <h2 class="text-center">Food Menu</h2>
         <div class="container">
 <?php
-require_once 'connectDB.php';
 
  $query = "SELECT * FROM food";
  $result = $pdo->query($query);
