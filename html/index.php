@@ -97,7 +97,7 @@ require_once 'connectDB.php';
                 echo "<div class='food-menu-box'>";
                 echo "<h4>" . htmlspecialchars($row['naam']) . "</h4>";
                 echo "<h5>Ingredienten : </h5>";
-                echo "<p>" . htmlspecialchars($row['ingredienten']) . "</p>";
+                echo "<p class='ingredienten'>" . htmlspecialchars($row['ingredienten']) . "</p>";
                 echo "</div>";
             }
             ?>
@@ -111,8 +111,8 @@ require_once 'connectDB.php';
 
     <!-- footer Section Starts Here -->
     <footer>
-        <div class="container text-center">
-            <p>All rights reserved. Made By <a href="#">Sami Benouari</a></p>
+        <div class="container4">
+            <p>All rights reserved. <br>  Made By Sami Benouari</p>
         </div>
     </footer>
     <!-- footer Section Ends Here -->
