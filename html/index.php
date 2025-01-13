@@ -33,7 +33,10 @@ require_once 'connectDB.php';
                 <a href="foods.html">Foods</a>
             </li>
             <li>
-                <a href="#">Contact</a>
+                <a href="contact.html">Contact</a>
+            </li>
+            <li>
+                <a href="login.html">Login</a>
             </li>
         </ul>
     </div>
