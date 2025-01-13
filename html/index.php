@@ -9,15 +9,13 @@ require_once 'connectDB.php';
     <meta charset="UTF-8">
     <!-- Important to make website responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Website</title>
+    <title>Twist Food</title>
 
     <!-- Link our CSS file -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!-- Navbar Section Starts Here -->
-
     <div class="container">
         <div class="logo">
 
@@ -49,7 +47,6 @@ require_once 'connectDB.php';
 
             <form action="food-search.html" method="POST">
                 <input type="search" name="search" placeholder="Search for Food.." required>
-                
             </form>
 
         </div>
@@ -59,7 +56,7 @@ require_once 'connectDB.php';
     <!-- Categories Section Starts Here  -->
     <section class="categories">
 
-              <div class="container2">
+        <div class="container2">
             <a href="category-foods.html">
                 <div class="box-3 ">
                     <img src="images/pizza.jpg" alt="Pizza" class="img-responsive img-curve">
@@ -92,32 +89,32 @@ require_once 'connectDB.php';
     <section class="food-menu">
         <h2 class="text-center">Food Menu</h2>
         <div class="container3">
-<?php
+            <?php
 
-$query = "SELECT * FROM food";
-$result = $pdo->query($query);
-while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-    echo "<div class='food-menu-box'>";
-    echo "<h4>" . htmlspecialchars($row['naam']) . "</h4>";
-    echo "<h5>Ingredienten : </h5>";
-    echo "<p>" . htmlspecialchars($row['ingredienten']) . "</p>";
-    echo "</div>";
-}
-?>
-</div>
-</section>
+            $query = "SELECT * FROM food";
+            $result = $pdo->query($query);
+            while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                echo "<div class='food-menu-box'>";
+                echo "<h4>" . htmlspecialchars($row['naam']) . "</h4>";
+                echo "<h5>Ingredienten : </h5>";
+                echo "<p>" . htmlspecialchars($row['ingredienten']) . "</p>";
+                echo "</div>";
+            }
+            ?>
+        </div>
+    </section>
 
-<!-- fOOD MEnu Section Ends Here -->
+    <!-- fOOD MEnu Section Ends Here -->
     <!-- social Section Starts Here -->
 
     <!-- social Section Ends Here -->
 
     <!-- footer Section Starts Here -->
-   <footer>
+    <footer>
         <div class="container text-center">
             <p>All rights reserved. Designed By <a href="#">Sami Benouari</a></p>
         </div>
-        </footer>
+    </footer>
 
     <!-- footer Section Ends Here -->
 
