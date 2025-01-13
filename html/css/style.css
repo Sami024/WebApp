@@ -5,17 +5,33 @@
 */
 
 /* CSS for All */
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap");
 * {
   margin: 0 0;
   padding: 0 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Syne", sans-serif;
 
   /* Header start here -----------------------------------------------------------------------------------------*/
 }
 body {
   height: 100vh;
 }
+/* VIDEO */
+.video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
 
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+/* VIDEO END */
 .container {
   width: 100%;
   margin: 0 auto;
@@ -67,12 +83,14 @@ ul li a:hover {
 
 .container1 {
   width: 40%;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: 1%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
+  
 }
 form {
   width: 100%;
@@ -85,7 +103,6 @@ form {
   border-radius: 20px;
 }
 .food-search {
-  background-image: url(../images/bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -114,7 +131,7 @@ form {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #3ce176;
+  background-color: #2f3542;
   border-radius: 20px;
 }
 .categories {
@@ -129,7 +146,7 @@ form {
 }
 /*  <!-- Categories Section Ends Here-------------------------------------------------------------------------- */
 a {
-  color: #ff6b81;
+  color: white;
   text-decoration: none;
 }
 
@@ -140,7 +157,7 @@ a {
   border-radius: 5px;
 }
 .btn-primary {
-  background-color: #ff6b81;
+  background-color:#2f3542;
   color: white;
   cursor: pointer;
   border-radius: 40px;
@@ -148,16 +165,16 @@ a {
 }
 .btn-primary:hover {
   color: white;
-  background-color: #ff4757;
+  background-color: #2f3542;
 }
 h2 {
-  color: #2f3542;
+  color: black;
   font-size: 2rem;
   /* margin-bottom: 2%; */
 }
 h3 {
   font-size: 1.5rem;
-  color: black;
+  color: white;
 }
 
 /* CSS for Food Menu */
@@ -169,7 +186,7 @@ h3 {
   min-width: 45%;
   height: 120px;
   background-color: rgb(204, 212, 207);
-  border: 2px solid black;
+  border: 2px solid white;
   text-align: center;
   border-radius: 20px;
   /* margin-right: 20px; */
@@ -185,11 +202,11 @@ h3 {
   width: 95%;
   padding: 1%;
   height: 300px;
-  border: 2px solid green;
+  border: 2px solid white;
   gap: 10px;
   display: flex;
   justify-content: space-between;
-  background-color: #3ce176;
+  background-color: #2f3542;
   border-radius: 20px;
   flex-wrap: wrap;
 }
@@ -282,11 +299,11 @@ h3 {
     width: 90%;
     margin: auto;
     padding: 1%;
-    border: 2px solid green;
+    border: 2px solid white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #3ce176;
+    background-color: #2f3542;
     border-radius: 20px;
   }
 }

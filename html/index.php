@@ -49,7 +49,7 @@ require_once 'connectDB.php';
 
             <form action="food-search.html" method="POST">
                 <input type="search" name="search" placeholder="Search for Food.." required>
-                <input type="submit" name="submit" value="Search" class="btn btn-primary">
+                
             </form>
 
         </div>
@@ -78,7 +78,7 @@ require_once 'connectDB.php';
 
             <a href="#">
                 <div class="box-3 ">
-                    <img src="images/momo.jpg" alt="Momo" class="img-responsive img-curve">
+                    <img src="images/momo.jpg" alt="Schotels" class="img-responsive img-curve">
 
                     <h3 class="text-black ">Schotels</h3>
                 </div>
