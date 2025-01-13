@@ -112,12 +112,9 @@ require_once 'connectDB.php';
     <!-- footer Section Starts Here -->
     <footer>
         <div class="container text-center">
-            <p>All rights reserved. Designed By <a href="#">Sami Benouari</a></p>
+            <p>All rights reserved. Made By <a href="#">Sami Benouari</a></p>
         </div>
     </footer>
-
     <!-- footer Section Ends Here -->
-
 </body>
-
 </html>
