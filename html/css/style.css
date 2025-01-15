@@ -1,4 +1,3 @@
-
 /* CSS for All */
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap");
 * {
@@ -8,9 +7,9 @@
 
   /* Header start here -----------------------------------------------------------------------------------------*/
 }
-body {
-  height: 100vh;
-}
+/* body {
+  height: 100dvh;
+} */
 .container {
   width: 100%;
   margin: 0 auto;
@@ -48,6 +47,8 @@ ul li a:hover {
 
 .img-responsive {
   width: 100%;
+  height: 100%;
+  align-self: center;
 }
 .img-curve {
   border-radius: 15px;
@@ -71,7 +72,6 @@ ul li a:hover {
   align-items: center;
   border-radius: 20px;
   background-color: black;
-  
 }
 form {
   width: 100%;
@@ -98,7 +98,6 @@ form {
   border: none;
   border-radius: 5px;
   background-color: black;
-
 }
 ::placeholder {
   color: white;
@@ -139,7 +138,7 @@ a {
   border-radius: 5px;
 }
 .btn-primary {
-  background-color:black;
+  background-color: black;
   color: white;
   cursor: pointer;
   border-radius: 40px;
@@ -163,6 +162,8 @@ h3 {
 .food-menu {
   padding: 4% 0;
   color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .food-menu-box {
   min-width: 30%;
@@ -171,7 +172,6 @@ h3 {
   border: 2px solid white;
   text-align: center;
   border-radius: 20px;
-
 }
 h4 {
   color: black;
@@ -186,16 +186,16 @@ h5 {
   padding-left: 10px;
   margin-top: 10px;
 }
-.ingredienten{
+.ingredienten {
   margin-top: 10px;
-padding-left: 20px;
+  padding-left: 20px;
 
   text-align: left;
 }
 .container3 {
   width: 95%;
   padding: 1%;
-  height: 300px;
+  height: auto;
   border: 2px solid white;
   gap: 10px;
   display: flex;
@@ -206,13 +206,15 @@ padding-left: 20px;
 }
 
 /* footer */
-.container4  {
+.container4 {
   background-color: black;
   color: white;
-  text-align: center;  
-  margin: 0 auto;
+  text-align: center;
+  /* margin: 0 auto; */
   padding: 1%;
-  
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
 
 /* -----------------------------------------------------------------------------------------------------
@@ -224,16 +226,38 @@ padding-left: 20px;
     width: 10%;
     margin-left: 10px;
   }
-
-  .menu ul {
-    text-align: center;
-    display: inline-block;
+  .img-responsive {
+    width: 100%;
+    height: 80%;
+    align-self: center;
   }
 
+  .container ul {
+    width: 50%;
+    margin-left: 5px;
+   display: flex;
+  }
+
+  ul li {
+    padding: 2%;
+    font-size: medium;
+  }
   .food-search input[type="search"] {
     width: 80%;
     padding: 2%;
     /* margin-bottom: 3%; */
+  }
+
+  .container2 {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    padding: 1%;
+    display: block;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    
   }
 
   .btn {
@@ -283,4 +307,16 @@ padding-left: 20px;
     background-color: black;
     border-radius: 20px;
   }
+}
+.container3 {
+  width: 80%;
+  padding: 1%;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 20px;
+  color: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
 }

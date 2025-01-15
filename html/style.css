@@ -5,12 +5,12 @@
 */
 
 /* CSS for All */
-* {
+*{
     margin: 0 0;
     padding: 0 0;
     font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-  }
+    /* text-align: center; */
+  } 
   
   .img-responsive {
     width: 100%;
@@ -37,20 +37,6 @@
     
   }
    
-  /* .float-container{
-      position: relative;
-  }
-  .float-text{
-      position: absolute;
-      bottom: 50px;
-      left: 40%;
-  }
-  fieldset{
-      border: 1px solid white;
-      margin: 5%;
-      padding: 3%;
-      border-radius: 5px;
-  } */
   
   /* CSSS for navbar section */
   
