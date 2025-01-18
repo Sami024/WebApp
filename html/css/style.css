@@ -1,15 +1,22 @@
 /* CSS for All */
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap");
 * {
-  margin: 0 0;
-  padding: 0 0;
+   margin: 0 0; 
+  /* padding: 0 0; */
   font-family: "Syne", sans-serif;
 
   /* Header start here -----------------------------------------------------------------------------------------*/
 }
-/* body {
-  height: 100dvh;
-} */
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 6rem;
+  box-sizing: inherit;
+}
 .container {
   width: 100%;
   margin: 0 auto;
@@ -101,6 +108,7 @@ form {
 }
 ::placeholder {
   color: white;
+  text-align: left;
 }
 /* <!-- fOOD SEARCH Section Ends Here -->---------------------------------------------------------------------- */
 
@@ -114,6 +122,7 @@ form {
   justify-content: space-around;
   align-items: center;
   border-radius: 20px;
+  background-color: black;
 }
 .categories {
   padding: 0;
@@ -160,13 +169,15 @@ h3 {
 
 /* CSS for Food Menu */
 .food-menu {
-  padding: 4% 0;
-  color: white;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  /* padding: 0; */
+  /* width: 95%; */
+  /* padding: 4% 0;  */
+  /* margin-top: 10px;
+  margin-bottom: 10px;  */
+  background-color: blue;
 }
 .food-menu-box {
-  min-width: 30%;
+  width: 450px;
   height: 120px;
   background-color: rgb(204, 212, 207);
   border: 2px solid white;
@@ -193,16 +204,19 @@ h5 {
   text-align: left;
 }
 .container3 {
-  width: 95%;
+  width: 80%;
   padding: 1%;
-  height: auto;
+  /* height: auto; */
   border: 2px solid white;
-  gap: 10px;
+  gap: 5px;
   display: flex;
   justify-content: space-between;
   border-radius: 20px;
-  flex-wrap: wrap;
   color: black;
+  background-color: yellow;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* footer */
@@ -210,10 +224,9 @@ h5 {
   background-color: black;
   color: white;
   text-align: center;
-  /* margin: 0 auto; */
   padding: 1%;
-  position: fixed;
   width: 100%;
+  position: absolute;
   bottom: 0;
 }
 
@@ -235,7 +248,7 @@ h5 {
   .container ul {
     width: 50%;
     margin-left: 5px;
-   display: flex;
+    display: flex;
   }
 
   ul li {
@@ -243,11 +256,13 @@ h5 {
     font-size: medium;
   }
   .food-search input[type="search"] {
-    width: 80%;
+    width: 100%;
     padding: 2%;
-    /* margin-bottom: 3%; */
   }
-
+  ::placeholder {
+    color: white;
+    text-align: left;
+  }
   .container2 {
     width: 60%;
     margin-left: auto;
@@ -257,7 +272,6 @@ h5 {
     display: block;
     border-radius: 20px;
     margin-bottom: 10px;
-    
   }
 
   .btn {
@@ -279,16 +293,18 @@ h5 {
   .box-3 {
     width: 100%;
     margin: 4% auto;
+    background-color: blueviolet;
   }
 
   .food-menu {
-    padding: 20% 0;
+    padding: 10% 0;
   }
 
   .food-menu-box {
     width: 90%;
     padding: 5%;
     margin-bottom: 5%;
+    background-color: aqua;
   }
   .social {
     padding: 5% 0;
@@ -307,16 +323,15 @@ h5 {
     background-color: black;
     border-radius: 20px;
   }
-}
-.container3 {
-  width: 80%;
-  padding: 1%;
-  height: auto;
-  border: 2px solid white;
-  border-radius: 20px;
-  color: black;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  
+  .container3 {
+    width: 90%;
+    padding: 1%;
+    height: auto;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
