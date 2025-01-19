@@ -25,16 +25,16 @@ require_once 'connectDB.php';
 
         <ul>
             <li>
-                <a href="index.html">Home</a>
+                <a href="index.php">Home</a>
             </li>
             <li>
-                <a href="foods.html">Foods</a>
+                <a href="foods.php">Foods</a>
             </li>
             <li>
-                <a href="contact.html">Contact</a>
+                <a href="contact.php">Contact</a>
             </li>
             <li>
-                <a href="login.html">Login</a>
+                <a href="inlog.php">Login</a>
             </li>
         </ul>
     </div>
