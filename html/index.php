@@ -38,7 +38,7 @@ require_once 'connectDB.php';
             </li>
         </ul>
     </div>
-
+    
     <!-- Navbar Section Ends Here -->
 
     <!-- fOOD sEARCH Section Starts Here -->
