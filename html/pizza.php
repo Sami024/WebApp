@@ -27,8 +27,7 @@ require_once 'connectDB.php';
             <li>
                 <a href="index.php">Home</a>
             </li>
-           
-            <li>
+                        <li>
                 <a href="contact.php">Contact</a>
             </li>
             <li>
@@ -89,7 +88,7 @@ require_once 'connectDB.php';
         <div class="container3">
             <?php
 
-            $query = "SELECT * FROM food";
+            $query = "SELECT * FROM food where soort = 'pizza'";
             $result = $pdo->query($query);
             while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                 echo "<div class='food-menu-box'>";

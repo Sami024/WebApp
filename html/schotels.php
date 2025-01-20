@@ -1,5 +1,5 @@
 <?php
-require_once 'connectDB.php';
+    require_once 'connectDB.php';
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +27,7 @@ require_once 'connectDB.php';
             <li>
                 <a href="index.php">Home</a>
             </li>
-           
+
             <li>
                 <a href="contact.php">Contact</a>
             </li>
@@ -36,7 +36,7 @@ require_once 'connectDB.php';
             </li>
         </ul>
     </div>
-    
+
     <!-- Navbar Section Ends Here -->
 
     <!-- fOOD sEARCH Section Starts Here -->
@@ -89,15 +89,15 @@ require_once 'connectDB.php';
         <div class="container3">
             <?php
 
-            $query = "SELECT * FROM food";
-            $result = $pdo->query($query);
-            while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                echo "<div class='food-menu-box'>";
-                echo "<h4>" . htmlspecialchars($row['naam']) . "</h4>";
-                echo "<h5>Ingredienten : </h5>";
-                echo "<p class='ingredienten'>" . htmlspecialchars($row['ingredienten']) . "</p>";
-                echo "</div>";
-            }
+                $query  = "SELECT * FROM food where soort = 'schotels'";
+                $result = $pdo->query($query);
+                while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                    echo "<div class='food-menu-box'>";
+                    echo "<h4>" . htmlspecialchars($row['naam']) . "</h4>";
+                    echo "<h5>Ingredienten : </h5>";
+                    echo "<p class='ingredienten'>" . htmlspecialchars($row['ingredienten']) . "</p>";
+                    echo "</div>";
+                }
             ?>
         </div>
     </section>

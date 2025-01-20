@@ -89,7 +89,7 @@ require_once 'connectDB.php';
         <div class="container3">
             <?php
 
-            $query = "SELECT * FROM food";
+            $query = "SELECT * FROM food where soort = 'broodjes'";
             $result = $pdo->query($query);
             while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                 echo "<div class='food-menu-box'>";
