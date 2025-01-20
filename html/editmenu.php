@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editmenu</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     <link rel="stylesheet" href="css/style1.css">
 </head>
 <body>
@@ -12,12 +12,12 @@
     <form action="ProcessMenu.php" method="post">
 <!-- ---------------------------------------------------------------------------- -->
 <label for="naam">Naam</label>
-<input type="text" id="naam" name="naam" >
+<input type="text" id="naam" name="naam" required>
 <!-- ---------------------------------------------------------------------------- -->
 <fieldset>
 <legend>Dieet</legend>
 <label for="">
-<input type="radio" name="dieet" value="Vegan">
+<input type="radio" name="dieet" value="Vegan" checked>
 Vegan
 </label>
 <br>
@@ -37,8 +37,8 @@ Vis
 </label>
 </fieldset>
 <!-- ---------------------------------------------------------------------------- -->
-<label for="message">Ingedienten</label>
-<textarea id="ingredienten" name="ingredienten" ></textarea>
+<label for="message">Ingredienten</label>
+<textarea rows="5" cols="50" id="ingredienten" name="ingredienten" required ></textarea>
 <!-- ---------------------------------------------------------------------------- -->
 <label for="priority">Soort</label>
 <select  id="soort" name="soort">
@@ -50,7 +50,7 @@ Vis
 
 <!-- ---------------------------------------------------------------------------- -->
 <label for="prijs">Prijs</label>
-<input type="double" id="prijs" name="prijs" >
+<input type="double" id="prijs" name="prijs" required >
 
 <input type="submit" value="ADD to Menu">
 <!-- ---------------------------------------------------------------------------- -->
@@ -59,46 +59,46 @@ Vis
 <div>
 <table border="1"  cellpadding="0" >
 <tr>
-    <th>ID</th>
-    <th>Soort</th>
-    <th>Naam</th>
-    <th>Ingredienten</th>
-    <th>Dieet</th>
-    <th>Prijs</th>
-    <th>Operation</th>
+    <th class="id" >ID</th>
+    <th class="soort" >Soort</th>
+    <th class="naam" >Naam</th>
+    <th class="ingredienten">Ingredienten</th>
+    <th class="dieet" >Dieet</th>
+    <th class="prijs" >Prijs</th>
+    <th class="operation">Operation</th>
 </tr>
 <?php
-$connection = mysqli_connect('localhost', 'root', '', 'restaurant');
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
-    $delete = "DELETE FROM food WHERE id = $id";
-    $query = mysqli_query($connection, $delete);
+    $connection = mysqli_connect('localhost', 'root', '', 'restaurant');
+    if (isset($_GET['id'])) {
+        $id     = $_GET['id'];
+        $delete = "DELETE FROM food WHERE id = $id";
+        $query  = mysqli_query($connection, $delete);
 
-}
+    }
 
-$select = "SELECT * FROM food";
-$query = mysqli_query($connection, $select);
+    $select = "SELECT * FROM food";
+    $query  = mysqli_query($connection, $select);
 
-$num = mysqli_num_rows($query);
-if ($num > 0) {
-    while ($result = mysqli_fetch_assoc($query)) {
-        echo "
+    $num = mysqli_num_rows($query);
+    if ($num > 0) {
+        while ($result = mysqli_fetch_assoc($query)) {
+            echo "
         <tr>
     <td>" . $result['id'] . "</td>
     <td>" . $result['soort'] . "</td>
     <td>" . $result['naam'] . "</td>
     <td>" . $result['ingredienten'] . "</td>
     <td>" . $result['dieet'] . "</td>
-    <td>" . $result['prijs'] ." "."euro" ."</td>
+    <td>" . $result['prijs'] . "€" . "</td>
     <td>
-    <a href='editmenu.php? id=" . $result['id'] . " ' class= 'btn'>Delete</a>
-    <a href='menuUpdate.php? id=" . $result['id'] . " ' class= 'btn'>Update</a>
-    
+    <a href='editmenu.php? id=" . $result['id'] . " ' class= 'btn1'>Delete</a>
+    <a href='menuUpdate.php? id=" . $result['id'] . " ' class= 'btn2'>Update</a>
+
 </tr>";
 
-    }
+        }
 
-}
+    }
 
 ?>
 
@@ -106,30 +106,7 @@ if ($num > 0) {
 </body>
 </html>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
-
-
-
-
-
-
-
-
 
 </body>
 </html>

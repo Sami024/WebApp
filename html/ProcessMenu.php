@@ -1,12 +1,18 @@
 <?php
 
-require_once 'connectDB.php';
+require 'connectDB.php';
 
 $naam = $_POST['naam'];
 $dieet = $_POST['dieet'];
 $ingredienten = $_POST['ingredienten'];
 $soort = $_POST['soort'];
 $prijs = $_POST['prijs'];
+
+
+
+
+
+
 
 
 $host='localhost';

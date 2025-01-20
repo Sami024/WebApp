@@ -1,16 +1,45 @@
 
-
-table{
-
-width: 100%;
-text-align: center;
-border-spacing:8px
-
+h1 {
+  
+  text-align: center;
+}
+td {
+  padding: 8px;
+  border: 1px solid black;
+  text-align: center;
 }
 
-th{
+th {
+  background-color: blue;
+  color: white;
+  text-align: center;
+}
+.id {
+  width: 5%;
+  
+}
+.ingredienten {
+  width: 30%;
+}
+.btn1{
+font-weight: bold;
+color: red;
+font-size: 18px;
+}
+.btn2{
 
+  font-weight: bold;
+  color: darkorange;
+font-size: 18px;
 
-    background-color: blue;
- color: white   ;
+}
+input[type="submit"] {
+  width: 20%;
+  background-color: green;
+  color: white;
+ font-weight: bold;
+}
+fieldset {
+  width: 20%;
+  padding: 10px;
 }
