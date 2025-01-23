@@ -95,6 +95,7 @@ form {
   background-repeat: no-repeat;
   background-position: center;
   padding: 7% 0;
+  background-image: url("../images/espace-agreable-2.jpg");
 }
 
 .food-search input[type="search"] {
@@ -293,7 +294,7 @@ h5 {
   .box-3 {
     width: 100%;
     margin: 4% auto;
-    background-color: blueviolet;
+    background-color: gray;
   }
 
   .food-menu {
@@ -304,7 +305,7 @@ h5 {
     width: 90%;
     padding: 5%;
     margin-bottom: 5%;
-    background-color: aqua;
+    background-color: white;
   }
   .social {
     padding: 5% 0;
