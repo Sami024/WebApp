@@ -65,7 +65,7 @@ require_once 'connectDB.php';
 
             <a href="broodjes.php">
                 <div class="box-3 ">
-                    <img src="images/burger.jpg" alt="Burger" class="img-responsive img-curve">
+                    <img src="images/doner-kebab-3-1080x960.jpg" alt="Burger" class="img-responsive img-curve">
 
                     <h3 class="text-black">Broodjes</h3>
                 </div>
@@ -73,7 +73,7 @@ require_once 'connectDB.php';
 
             <a href="schotels.php">
                 <div class="box-3 ">
-                    <img src="images/momo.jpg" alt="Schotels" class="img-responsive img-curve">
+                    <img src="images/ribeye-steak-met-chilisaus-salade-noedels-mais-in-een-schotel-bovenaanzicht-op-donkere-achtergrond_689047-1919.avif" alt="Schotels" class="img-responsive img-curve">
 
                     <h3 class="text-black ">Schotels</h3>
                 </div>
