@@ -65,7 +65,7 @@ require_once 'connectDB.php';
 
             <a href="broodjes.php">
                 <div class="box-3 ">
-                    <img src="images/doner-kebab-3-1080x960.jpg" alt="Burger" class="img-responsive img-curve">
+                    <img src="images/doner-kebab-3-1080x960.jpg" alt="Broodje" class="img-responsive img-curve">
 
                     <h3 class="text-black">Broodjes</h3>
                 </div>
