@@ -81,9 +81,12 @@ require_once 'connectDB.php';
 
         </div>
     </section>
-    <!-- Categories Section Ends Here
 
-    <!- fOOD MEnu Section Starts Here -->
+    <!-- Categories Section Ends Here -->
+
+    <div class="spacing"></div>
+
+    <!-- fOOD MEnu Section Starts Here -->
     <section class="food-menu">
         <h2 class="text-center">Food Menu</h2>
         <div class="container3">
