@@ -10,7 +10,7 @@
         if (isset($_POST["login"])) {
 
             if (empty($_POST['username']) || empty($_POST['password'])) {
-                echo '<center><h3 style="color:black">Please fill all fields</h3></center>';
+                echo '<center><h1 style="color:red">Please fill all fields</h1></center>';
             } else {
 
                 $query     = "SELECT * FROM adminlog WHERE username=? AND password = ?";

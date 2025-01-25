@@ -237,6 +237,74 @@ h5 {
   bottom: 0;
   border-top: white 2px solid;
 }
+/* Contact Form Styles */
+.contact {
+    background-color: black;
+    color: white;
+    padding: 2rem 1rem;
+    font-family: "Syne", sans-serif;
+  }
+  
+  .contact .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 2px solid white;
+    border-radius: 15px;
+    background-color: #222;
+  }
+  
+  .contact h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+  
+  .contact .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .contact .form-group input,
+  .contact .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .contact .form-group input::placeholder,
+  .contact .form-group textarea::placeholder {
+    color: #aaaaaa;
+  }
+  
+  .contact .form-group textarea {
+    resize: none;
+  }
+  
+  .contact .form-group button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  
 @media only screen and (max-width: 768px) {
     .logo {
       width: 10%;

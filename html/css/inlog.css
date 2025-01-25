@@ -1,35 +1,68 @@
-body{
-    background-color:grey;
-}
-.container {
-
-    width: 350px;
-    height: 300px;
-    border: 10px black solid;
-    border-radius: 20px;
-    margin: 10px auto 0 auto;
-    padding-top: 150px;
-    font-size: 20px;
+body {
     background-color: white;
+    color: white;
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 350px;
+    height: auto;
+    border: 5px solid #000; /* Zwarte rand */
+    border-radius: 20px;
+    margin: 50px auto;
+    padding: 20px 15px;
+    background-color: white; /* Witte achtergrond */
     text-align: center;
-}
-form input{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schaduw voor een 3D-effect */
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: black; /* Zwarte tekst */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  form input {
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+    padding: 10px;
     text-align: center;
-    background-color: #f2f2f2;
-    height: 50px;
-}
-h2{
-    padding-top: 100px;
-    text-align: center;
-}
-input[type="submit"]{
-    background-color: green;
-    color: white;
-    font-size: 20px;
+    background-color: #f7f7f7; /* Lichtgrijze achtergrond */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  form input:focus {
+    outline: none;
+    border: 1px solid #ff0000; /* Rood wanneer geselecteerd */
+  }
+  
+  input[type="submit"] {
+    background-color: #ff0000; /* Rode achtergrond */
+    color: white; /* Witte tekst */
+    font-size: 1.2rem;
+    font-weight: bold;
     border-radius: 10px;
-    width: 30%;
-}
+    width: 50%;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #cc0000; /* Donkerdere rode tint bij hover */
+    transform: scale(1.05); /* Licht vergroten bij hover */
+  }
+  
+  input[type="submit"]:active {
+    background-color: #a80000; /* Nog donkerder rood bij klikken */
+    transform: scale(1); /* Terug naar normale grootte */
+  }
+  
