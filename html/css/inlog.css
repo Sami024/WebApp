@@ -1,0 +1,35 @@
+body{
+    background-color:grey;
+}
+.container {
+
+    width: 350px;
+    height: 300px;
+    border: 10px black solid;
+    border-radius: 20px;
+    margin: 10px auto 0 auto;
+    padding-top: 150px;
+    font-size: 20px;
+    background-color: white;
+    text-align: center;
+}
+form input{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
+    background-color: #f2f2f2;
+    height: 50px;
+}
+h2{
+    padding-top: 100px;
+    text-align: center;
+}
+input[type="submit"]{
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 30%;
+}
