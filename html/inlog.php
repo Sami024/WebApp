@@ -43,7 +43,7 @@
 <html>
 <head>
     <title>Login</title>
-    <link:css href="css/inlog.css">
+    <link rel="stylesheet" href="css/inlog.css">
 </head>
 <body>
 <h2>Login Admin & User</h2>

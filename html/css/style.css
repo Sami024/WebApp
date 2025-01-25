@@ -16,6 +16,7 @@ body {
   min-height: 100%;
   padding-bottom: 6rem;
   box-sizing: inherit;
+  background-color: black;
 }
 .container {
   width: 100%;
@@ -125,7 +126,7 @@ form {
   justify-content: space-around;
   align-items: center;
   border-radius: 20px;
-  background-color: white;
+  background-color: black;
 }
 .categories {
   padding: 0;
@@ -167,7 +168,7 @@ h2 {
 }
 h3 {
   font-size: 1.5rem;
-  color: black;
+  color: white;
 }
 
 /* CSS for Food Menu */
@@ -189,7 +190,7 @@ h3 {
   color: black;
 }
 h4 {
-  color: black;
+  color: white
   font-size: 1.2rem;
   margin-top: 10px;
   font-weight: bold;
@@ -208,9 +209,9 @@ h5 {
   text-align: left;
 }
 .container3 {
-  width: 80%;
+  width: 70%;
   padding: 1%;
-  /* height: auto; */
+
   border: 2px solid white;
   gap: 5px;
   display: flex;
@@ -297,7 +298,7 @@ h5 {
   .box-3 {
     width: 100%;
     margin: 4% auto;
-    background-color: gray;
+    background-color: transparent;
   }
 
   .food-menu {
