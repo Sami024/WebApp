@@ -36,29 +36,23 @@
 
     <!-- Contact Section Starts Here -->
 
+    <div class="container1">
+  <form action="action_page.php">
 
-    <section class="contact">
-        <div class="container">
-            <h2>Contacteer Ons</h2>
-            <form action="verwerk_contact.php" method="POST">
-                <div class="form-group">
-                    <label for="naam">Naam:</label>
-                    <input type="text" id="naam" name="naam" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="bericht">Bericht:</label>
-                    <textarea id="bericht" name="bericht" rows="5" required></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn">Verstuur</button>
-                </div>
-            </form>
-        </div>
-    </section>
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+   
+
+    <label for="subject">Question</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
         <!-- Contact Section Ends Here -->
         <footer>
         <div class="container4">

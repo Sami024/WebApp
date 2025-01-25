@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editmenu</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/editmenu.css">
 </head>
 <body>
     <h1>Add items to the Menu</h1>

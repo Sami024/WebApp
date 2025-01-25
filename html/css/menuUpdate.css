@@ -1,0 +1,144 @@
+/* Algemene instellingen voor de pagina */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white; /* Donkere achtergrond */
+    color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Horizontale centrering */
+    align-items: center; /* Verticale centrering */
+    min-height: 100vh; /* Volledige schermhoogte benutten */
+  }
+  
+  /* Container voor de inhoud */
+  .container {
+    width: 90%; /* Brede responsieve breedte */
+    max-width: 900px; /* Maximale breedte */
+    background-color: #ffffff; /* Witte achtergrond */
+    color: black; /* Zwarte tekstkleur */
+    padding: 30px;
+    border-radius: 15px; /* Gladde afgeronde hoeken */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Zachte schaduw */
+    text-align: center; /* Tekst centreren */
+  }
+  
+  /* Kopteksten */
+  h1 {
+    font-size: 2rem;
+    color: black; /* Rode koptekst */
+    margin-bottom: 20px;
+  }
+  
+  /* Formulier instellingen */
+  form {
+    display: flex;
+    flex-direction: column; /* Velden onder elkaar */
+    gap: 15px; /* Ruimte tussen velden */
+    margin-top: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+    text-align: left; /* Labels links uitlijnen */
+  }
+  
+  /* Invoervelden */
+  input[type="text"],
+  textarea,
+  select,
+  input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black; /* Zwarte rand */
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Houd padding binnen de breedte */
+  }
+  
+  textarea {
+    resize: none; /* Geen aanpasbare grootte */
+    height: 120px; /* Grotere hoogte voor tekstvelden */
+  }
+  
+  /* Fieldset styling */
+  fieldset {
+    border: 2px solid black; /* Dikkere rand */
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left; /* Inhoud links uitlijnen */
+  }
+  
+  legend {
+    background-color: black;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  /* Submit-knop */
+  input[type="submit"] {
+    background-color: #ff0000; /* Rode achtergrond */
+    color: white; /* Witte tekst */
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #cc0000; /* Donkerdere rode tint bij hover */
+    transform: scale(1.05); /* Knop licht vergroten */
+  }
+  
+  /* Tabel instellingen */
+  table {
+    width: 100%;
+    border-collapse: collapse; /* Randen samenvoegen */
+    margin-top: 30px;
+   
+    border: 1px solid black; /* Zwarte rand rondom de tabel */
+  }
+  
+  th, td {
+    padding: 12px;
+    border: 1px solid black; /* Zwarte randen rondom cellen */
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  th {
+    background-color: black; /* Zwarte achtergrond voor kopteksten */
+    color: white; /* Witte tekst */
+  }
+  
+  td {
+    color: black; /* Zwarte tekstkleur */
+  }
+  tr {
+    background-color: #f9f9f9; /* Lichte achtergrond voor rijen */
+  }
+  
+  /* Extra stijl voor mobielvriendelijkheid */
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    input[type="submit"] {
+      font-size: 1rem;
+    }
+  
+    th, td {
+      font-size: 0.9rem;
+    }
+  }
+  

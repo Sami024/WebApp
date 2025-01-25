@@ -1,0 +1,114 @@
+body {
+  background-color: white; /* Witte achtergrond */
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Flexbox toevoegen aan body */
+  justify-content: center; /* Horizontale centrering */
+  align-items: center; /* Verticale centrering */
+  height: 100vh; /* Vul volledige schermhoogte */
+  color: black; /* Zwarte standaardtekst */
+}
+
+.container {
+  width: 90%; /* Dynamische breedte */
+  max-width: 800px; /* Maximale breedte */
+  padding: 20px;
+  border: 2px solid black; /* Zwarte rand */
+  border-radius: 10px; /* Afronde hoeken */
+  background-color: white; /* Witte achtergrond */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Lichte schaduw */
+  text-align: center; /* Tekst centreren */
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: black; /* Zwarte tekst */
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%; /* Tabel breedte volledig */
+  border-collapse: collapse; /* Randen samenvoegen */
+  margin: 20px 0;
+}
+
+th, td {
+  padding: 12px; /* Extra padding */
+  border: 2px solid black; /* Zwarte randen */
+  text-align: center;
+  font-size: 1rem;
+}
+
+th {
+  background-color: black; /* Zwarte achtergrond */
+  color: white; /* Witte tekst */
+}
+
+td {
+  background-color: #f9f9f9; /* Lichte grijze achtergrond */
+}
+
+.btn1, .btn2 {
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px; /* Afgeronde hoeken */
+  padding: 10px 20px; /* Extra padding */
+  transition: transform 0.2s ease;
+}
+
+.btn1 {
+  color: red; /* Rode tekst */
+  background-color: transparent; /* Transparante achtergrond */
+}
+
+.btn1:hover {
+  color: darkred; /* Donkerrode kleur bij hover */
+}
+
+.btn2 {
+  color: green; /* Oranje tekst */
+  background-color: transparent;
+}
+
+.btn2:hover {
+  color: green; /* Donkeroranje kleur bij hover */
+}
+
+input[type="submit"] {
+  background-color: black; /* Zwarte achtergrond */
+  color: white; /* Witte tekst */
+  font-weight: bold;
+  border: none;
+  border-radius: 10px; /* Afronde hoeken */
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: red; /* Rode achtergrond bij hover */
+  transform: scale(1.05); /* Licht vergroten */
+}
+
+fieldset {
+  width: 100%; /* Vult breedte van de container */
+  padding: 20px;
+  margin: 20px 0;
+  border: 2px solid black; /* Zwarte rand */
+  border-radius: 10px;
+  background-color: #fff; /* Witte achtergrond */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Lichte schaduw */
+}
+
+legend {
+  font-weight: bold;
+  color: black;
+  font-size: 1.2rem;
+  text-align: center;
+}
