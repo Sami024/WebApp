@@ -3,9 +3,6 @@ body {
   font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  display: flex; /* Flexbox toevoegen aan body */
-  justify-content: center; /* Horizontale centrering */
-  align-items: center; /* Verticale centrering */
   height: 100vh; /* Vul volledige schermhoogte */
   color: black; /* Zwarte standaardtekst */
 }
@@ -20,21 +17,34 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Lichte schaduw */
   text-align: center; /* Tekst centreren */
 }
+.add-items {
+  border: 5px solid rgba(37, 109, 99, 0.425); /* Zwarte rand */
+  margin: 10px auto; /* Midden van de pagina */
+  width: 80%; /* Dynamische breedte */
+  border-radius: 10px; /* Afronde hoeken */
+  padding: 10px; /* Extra padding */
+  box-sizing: border-box;
+}
 
 h1 {
   text-align: center;
   font-size: 2rem;
   color: black; /* Zwarte tekst */
-  margin-bottom: 20px;
+  border: 2px solid green;
+  border-radius: 5px;
+  background-color: #2fa35b; /* Lichte grijze achtergrond */
+  width: 100%;
+  margin-top: 0;
 }
 
 table {
-  width: 100%; /* Tabel breedte volledig */
+  width: 80%; /* Tabel breedte volledig */
   border-collapse: collapse; /* Randen samenvoegen */
-  margin: 20px 0;
+  margin: 5px auto; /* Midden van de pagina */
 }
 
-th, td {
+th,
+td {
   padding: 12px; /* Extra padding */
   border: 2px solid black; /* Zwarte randen */
   text-align: center;
@@ -50,7 +60,8 @@ td {
   background-color: #f9f9f9; /* Lichte grijze achtergrond */
 }
 
-.btn1, .btn2 {
+.btn1,
+.btn2 {
   font-weight: bold;
   font-size: 1rem;
   text-transform: uppercase;
@@ -68,15 +79,17 @@ td {
 
 .btn1:hover {
   color: darkred; /* Donkerrode kleur bij hover */
+  font-size: 20px; /* Grootte van de tekst */
 }
 
 .btn2 {
   color: green; /* Oranje tekst */
   background-color: transparent;
+  margin-top: 2px;
 }
-
 .btn2:hover {
   color: green; /* Donkeroranje kleur bij hover */
+  font-size: 20px; /* Grootte vergroten */
 }
 
 input[type="submit"] {
@@ -88,16 +101,18 @@ input[type="submit"] {
   padding: 10px 20px;
   font-size: 1.1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 input[type="submit"]:hover {
-  background-color: red; /* Rode achtergrond bij hover */
+  background-color: rgb(30, 202, 87); /* Rode achtergrond bij hover */
   transform: scale(1.05); /* Licht vergroten */
 }
 
 fieldset {
-  width: 100%; /* Vult breedte van de container */
+  width: 10%; /* Vult breedte van de container */
   padding: 20px;
   margin: 20px 0;
   border: 2px solid black; /* Zwarte rand */
@@ -111,4 +126,98 @@ legend {
   color: black;
   font-size: 1.2rem;
   text-align: center;
+}
+a {
+  text-decoration: none; /* Geen onderstreping */
+}
+input[type="text"] {
+  width: 50%; /* Volledige breedte */
+  padding: 10px; /* Extra padding */
+  margin: 5px 0; /* Boven en onder marge */
+  box-sizing: border-box; /* Inclusief padding en border */
+  border: 2px solid black; /* Zwarte rand */
+  border-radius: 5px; /* Afronde hoeken */
+}
+input[type="double"] {
+  width: 50%; /* Volledige breedte */
+  padding: 10px; /* Extra padding */
+  margin: 5px 0; /* Boven en onder marge */
+  box-sizing: border-box; /* Inclusief padding en border */
+  border: 2px solid black; /* Zwarte rand */
+  border-radius: 5px; /* Afronde hoeken */
+}
+#ingredienten {
+  width: 50%; /* Volledige breedte */
+  padding: 10px; /* Extra padding */
+  margin: 5px 0; /* Boven en onder marge */
+  box-sizing: border-box; /* Inclusief padding en border */
+  border: 2px solid black; /* Zwarte rand */
+  border-radius: 5px; /* Afronde hoeken */
+}
+select {
+  width: 25%; /* Volledige breedte */
+  padding: 10px; /* Extra padding */
+  margin: 5px 0; /* Boven en onder marge */
+  box-sizing: border-box; /* Inclusief padding en border */
+  border: 2px solid black; /* Zwarte rand */
+  border-radius: 5px; /* Afronde hoeken */
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%; /* Volledige breedte */
+  }
+
+  input[type="text"] {
+    width: 100%; /* Volledige breedte */
+  }
+  input[type="double"] {
+    width: 100%; /* Volledige breedte */
+  }
+  #ingredienten {
+    width: 100%; /* Volledige breedte */
+  }
+  select {
+    width: 100%; /* Volledige breedte */
+  }
+
+  table {
+    width: 100%; /* Tabel breedte volledig */
+    border-collapse: collapse; /* Randen samenvoegen */
+    margin: 5px auto; /* Midden van de pagina */
+  }
+
+  th,
+  td {
+    padding: 3px; /* Extra padding */
+    border: 2px solid black; /* Zwarte randen */
+    text-align: left;
+    /* font-size: 1rem; */
+    font-size: smaller;
+  }
+
+  th {
+    background-color: black; /* Zwarte achtergrond */
+    color: white; /* Witte tekst */
+  }
+
+  td {
+    background-color: #f9f9f9; /* Lichte grijze achtergrond */
+  }
+
+  .btn1,
+  .btn2 {
+    text-align: left;
+    font-size: small;
+    padding: 0;
+  }
+  .btn1:hover {
+    color: darkred; /* Donkerrode kleur bij hover */
+    font-size: 16px; /* Grootte van de tekst */
+  }
+
+  .btn2 :hover{
+    color: green; /* Oranje tekst */
+    font-size: 16px; /* Grootte van de tekst */
+  }
 }

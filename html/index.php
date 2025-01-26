@@ -20,7 +20,7 @@ require_once 'connectDB.php';
         <div class="logo">
 
             <img src="images/1598562279236_Twist-Food_Logo-1.png"
-                alt="Restaurant Logo" class="img-responsive">
+                alt="Restaurant Logo" class="logo">
         </div>
 
         <ul>

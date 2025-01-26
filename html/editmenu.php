@@ -7,13 +7,50 @@
     <link rel="stylesheet" href="css/editmenu.css">
 </head>
 <body>
-    <h1>Add items to the Menu</h1>
+    
+    <div class="add-items">
+     <h1>Add items to the Menu</h1> 
     <form action="ProcessMenu.php" method="post">
+
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
 <!-- ---------------------------------------------------------------------------- -->
-<label for="naam">Naam</label>
-<input type="text" id="naam" name="naam" required>
+<label for="naam"></label>
+<input type="text" id="naam" name="naam" placeholder="Naam van het gerecht" required>
+<br>
 <!-- ---------------------------------------------------------------------------- -->
-<fieldset>
+<label for="prijs"></label>
+<input type="double" id="prijs" name="prijs"  placeholder="Prijs" required >
+<br>
+<!-- -------------------------------------------------------------------------- -->
+<label for="Ingredienten"></label>
+<textarea rows="5" cols="50" id="ingredienten" name="ingredienten" placeholder="Ingredienten" required ></textarea>
+<br>
+
+<!-- ------------------------------------------------------------------------------------------ -->
+
+
+<label for="Soort">Soort</label><br>
+<select  id="soort" name="soort">
+<option value="Pizza">Pizza</option>
+<option value="Broodjes">Broodjes</option>
+<option value="Schotels">Schotels</option>
+</select>
+<br>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<label for="Soort">Dieet</label><br>
+<select  id="soort" name="dieet">
+<option value="Vegan">Vegan</option>
+<option value="Vegatarisch">Vegetarisch</option>
+<option value="Vlees"> Vlees</option>
+<option value=" Vis"> Visis</option>
+</select>
+<br>
+<!-- ------------------------------------------------------------------------------------------------------- -->
+
+
+
+<!-- <fieldset>
 <legend>Dieet</legend>
 <label for="">
 <input type="radio" name="dieet" value="Vegan" checked>
@@ -34,26 +71,19 @@ Vlees
 <input type="radio" name="dieet" value="Vis">
 Vis
 </label>
-</fieldset>
-<!-- ---------------------------------------------------------------------------- -->
-<label for="message">Ingredienten</label>
-<textarea rows="5" cols="50" id="ingredienten" name="ingredienten" required ></textarea>
-<!-- ---------------------------------------------------------------------------- -->
-<label for="priority">Soort</label>
-<select  id="soort" name="soort">
-<option value="Pizza">Pizza</option>
-<option value="Broodjes">Broodjes</option>
-<option value="Schotels">Schotels</option>
-</select>
+</fieldset> -->
 <!-- ---------------------------------------------------------------------------- -->
 
 <!-- ---------------------------------------------------------------------------- -->
-<label for="prijs">Prijs</label>
-<input type="double" id="prijs" name="prijs" required >
 
-<input type="submit" value="ADD to Menu">
+<!-- ---------------------------------------------------------------------------- -->
+
+<!-- ---------------------------------------------------------------------------- -->
+
+<input type="submit" value="Add to Menu">
 <!-- ---------------------------------------------------------------------------- -->
     </form>
+    </div>
 
 <div>
 <table border="1"  cellpadding="0" >
@@ -75,7 +105,7 @@ Vis
 
     }
 
-    $select = "SELECT * FROM food";
+    $select = "SELECT * FROM food order by soort";
     $query  = mysqli_query($connection, $select);
 
     $num = mysqli_num_rows($query);
@@ -88,7 +118,7 @@ Vis
     <td>" . $result['naam'] . "</td>
     <td>" . $result['ingredienten'] . "</td>
     <td>" . $result['dieet'] . "</td>
-    <td>" . $result['prijs'] . "€" . "</td>
+    <td>" ."€".$result['prijs'] . "</td>
     <td>
     <a href='editmenu.php? id=" . $result['id'] . " ' class= 'btn1'>Delete</a>
     <a href='menuUpdate.php? id=" . $result['id'] . " ' class= 'btn2'>Update</a>
