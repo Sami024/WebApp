@@ -7,24 +7,24 @@
     <link rel="stylesheet" href="css/editmenu.css">
 </head>
 <body>
-    
+
     <div class="add-items">
-     <h1>Add items to the Menu</h1> 
+     <h1>Add items to the Menu</h1>
     <form action="ProcessMenu.php" method="post">
 
 <!-- ------------------------------------------------------------------------------------------------------------------------ -->
 
 <!-- ---------------------------------------------------------------------------- -->
 <label for="naam"></label>
-<input type="text" id="naam" name="naam" placeholder="Naam van het gerecht" required>
+<input type="text" id="naam" name="naam" placeholder="Naam van het gerecht">
 <br>
 <!-- ---------------------------------------------------------------------------- -->
 <label for="prijs"></label>
-<input type="double" id="prijs" name="prijs"  placeholder="Prijs" required >
+<input type="double" id="prijs" name="prijs"  placeholder="Prijs"  >
 <br>
 <!-- -------------------------------------------------------------------------- -->
 <label for="Ingredienten"></label>
-<textarea rows="5" cols="50" id="ingredienten" name="ingredienten" placeholder="Ingredienten" required ></textarea>
+<textarea rows="5" cols="50" id="ingredienten" name="ingredienten" placeholder="Ingredienten"></textarea>
 <br>
 
 <!-- ------------------------------------------------------------------------------------------ -->
@@ -47,46 +47,14 @@
 </select>
 <br>
 <!-- ------------------------------------------------------------------------------------------------------- -->
-
-
-
-<!-- <fieldset>
-<legend>Dieet</legend>
-<label for="">
-<input type="radio" name="dieet" value="Vegan" checked>
-Vegan
-</label>
-<br>
-<label for="">
-<input type="radio" name="dieet" value="Vegatarisch">
-Vegatarisch
-</label>
-<br>
-<label for="">
-<input type="radio" name="dieet" value="Vlees">
-Vlees
-</label>
-<br>
-<label for="">
-<input type="radio" name="dieet" value="Vis">
-Vis
-</label>
-</fieldset> -->
-<!-- ---------------------------------------------------------------------------- -->
-
-<!-- ---------------------------------------------------------------------------- -->
-
-<!-- ---------------------------------------------------------------------------- -->
-
-<!-- ---------------------------------------------------------------------------- -->
-
 <input type="submit" value="Add to Menu">
 <!-- ---------------------------------------------------------------------------- -->
     </form>
     </div>
+    <p class="available" >Available Menu's</p>
 
 <div>
-<table border="1"  cellpadding="0" >
+<table>
 <tr>
     <th class="id" >ID</th>
     <th class="soort" >Soort</th>
@@ -118,7 +86,7 @@ Vis
     <td>" . $result['naam'] . "</td>
     <td>" . $result['ingredienten'] . "</td>
     <td>" . $result['dieet'] . "</td>
-    <td>" ."€".$result['prijs'] . "</td>
+    <td>" . "€" . $result['prijs'] . "</td>
     <td>
     <a href='editmenu.php? id=" . $result['id'] . " ' class= 'btn1'>Delete</a>
     <a href='menuUpdate.php? id=" . $result['id'] . " ' class= 'btn2'>Update</a>

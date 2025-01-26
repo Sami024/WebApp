@@ -5,9 +5,6 @@ body {
     color: black;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center; /* Horizontale centrering */
-    align-items: center; /* Verticale centrering */
     min-height: 100vh; /* Volledige schermhoogte benutten */
   }
   
@@ -141,4 +138,7 @@ body {
       font-size: 0.9rem;
     }
   }
-  
+  .available {
+    width: 80%;
+    background-color: green;
+  }

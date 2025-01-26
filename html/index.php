@@ -106,10 +106,6 @@ require_once 'connectDB.php';
     </section>
 
     <!-- fOOD MEnu Section Ends Here -->
-    <!-- social Section Starts Here -->
-
-    <!-- social Section Ends Here -->
-
     <!-- footer Section Starts Here -->
     <footer>
         <div class="container4">

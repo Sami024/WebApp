@@ -32,72 +32,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editmenu</title>
-    <link rel="stylesheet" href="css/menuUpdate.css">
-    <style>
-legend {
-  background-color: gray;
-  color: white;
-  padding: 5px 10px;
-}
-fieldset {
-  background-color: #eeeeee;
-  width: 30%;
-}
-table{
+    <link rel="stylesheet" href="css/editmenu.css">
 
-background-color: blanchedalmond;
-border: 2px solid black;
-
-}
-th,td{
-
-border: 2px solid black;
-border-radius: 10px;
-}
-input[type="submit"]{
-
-    background-color: green;
-}
-
-    </style>
 </head>
 <body>
-    <h1> Update Item (ID=                          <?php echo $row['id'] ?>) from the Menu</h1>
+
+<div class="update-items">
+    <h1> Update Item (ID=<?php echo $row['id'] ?>) from the Menu</h1>
     <form action="" method="post">
 <!-- ---------------------------------------------------------------------------- -->
-<label for="naam">Naam</label>
-<input type="text" id="naam" name="naam" value="<?php echo $row['naam'] ?>" >
-<!-- ---------------------------------------------------------------------------- -->
-<fieldset>
-<legend>Dieet</legend>
-<label for="" >
-  <h5>Vorige selectie :                        <?php echo $row['dieet'] ?></h5>
-<input type="radio" name="dieet" value="Vegan">
-Vegan
-</label><br><label for=""><input type="radio" name="dieet" value="Vegatarisch">Vegatarisch</label>
-<br><label><input type="radio" name="dieet" value="Vlees">Vlees</label><br>
-<label for=""><input type="radio" name="dieet" value="Vis">Vis</label>
-</fieldset row=3 column=4>
-<!-- ---------------------------------------------------------------------------- -->
-<label for="message">Ingedienten</label>
-<textarea id="ingredienten" name="ingredienten"><?php echo $row['ingredienten'] ?></textarea>
-<!-- ---------------------------------------------------------------------------- -->
-<label for="priority">Soort</label>
+<label for="naam"></label>
+<h4>Naam van het gerecht : </h4><input type="text" id="naam" name="naam"  value="<?php echo $row['naam'] ?>">
+<br>
+<!-- ------------------------------------------------------------------------------------------------------ -->
+<label for="prijs"></label>
+<h4>Prijs</h4>
+<input type="double" id="prijs" name="prijs"value="<?php echo "€" . $row['prijs'] ?>" required >
+<br>
+<legend>Ingredienten</legend>
+<label for="Ingredienten"></label>
+<textarea rows="5" cols="50" id="ingredienten" name="ingredienten" required >
+
+<?php echo $row['ingredienten'] ?>
+</textarea>
+<br><br>
+<!-- ------------------------------------------------------------------------------------------------ -->
+<label for="Soort"> <h4>Soort</h4></label><br>
 <select  id="soort" name="soort">
 <option value="Pizza">Pizza</option>
 <option value="Broodjes">Broodjes</option>
 <option value="Schotels">Schotels</option>
 </select>
-<!-- ---------------------------------------------------------------------------- -->
-
-<!-- ---------------------------------------------------------------------------- -->
-<label for="prijs">Prijs</label>
-<input type="double" id="prijs" name="prijs"  value="<?php echo $row['prijs'] ?>">
+<br><br>
+<!-- ----------------------------------------------------------------------------------------------- -->
+<label for="Soort"> <h4>Dieet</h4></label><br>
+<select  id="soort" name="dieet">
+<option value="Vegan">Vegan</option>
+<option value="Vegatarisch">Vegetarisch</option>
+<option value="Vlees"> Vlees</option>
+<option value=" Vis"> Vis</option>
+</select>
+<br>
+<!-- ------------------------------------------------------------------------------------------------------- -->
 
 <input type="submit" name="Update" value="Update">
 <!-- ---------------------------------------------------------------------------- -->
     </form>
 
+
+</div>
+
+<p class="available" >Available Menu's</p>
     <div>
 <table border="1"  cellpadding="0" >
 <tr>
@@ -124,7 +109,7 @@ Vegan
     <td>" . $result['naam'] . "</td>
     <td>" . $result['ingredienten'] . "</td>
     <td>" . $result['dieet'] . "</td>
-    <td>" . $result['prijs'] . "</td>
+    <td>" ."€". $result['prijs'] . "</td>
 
 
 </tr>";

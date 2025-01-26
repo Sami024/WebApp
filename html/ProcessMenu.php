@@ -8,6 +8,18 @@ $ingredienten = $_POST['ingredienten'];
 $soort = $_POST['soort'];
 $prijs = $_POST['prijs'];
 
+if (empty($naam) || empty($dieet) || empty($ingredienten) || empty($soort) || empty($prijs)) {
+    die('Please fill all the fields.');
+    
+}
+
+if (!is_numeric($prijs)) {
+    die('Price must be a number.');
+}
+
+
+
+
 
 
 
