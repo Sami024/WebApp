@@ -79,7 +79,7 @@ td {
 
 .btn1:hover {
   color: darkred; /* Donkerrode kleur bij hover */
-  font-size: 20px; /* Grootte van de tekst */
+  
 }
 
 .btn2 {
@@ -89,7 +89,7 @@ td {
 }
 .btn2:hover {
   color: green; /* Donkeroranje kleur bij hover */
-  font-size: 20px; /* Grootte vergroten */
+  
 }
 
 input[type="submit"] {
@@ -212,15 +212,7 @@ select {
     font-size: small;
     padding: 0;
   }
-  .btn1:hover {
-    color: darkred; /* Donkerrode kleur bij hover */
-    font-size: 16px; /* Grootte van de tekst */
-  }
-
-  .btn2 :hover{
-    color: green; /* Oranje tekst */
-    font-size: 16px; /* Grootte van de tekst */
-  }
+   
 }
 
 h4{
@@ -247,4 +239,26 @@ input[type="double"] {
   background-color: #2fa35b; /* Lichte grijze achtergrond */
   text-align: center;
   margin-top: 0;
+}
+.delete{
+  color: black; /* Rode tekst */
+  background-color: red; /* Transparante achtergrond */
+  font-weight: bold;
+  border: none;
+  border-radius: 5px; /* Afgeronde hoeken */
+  margin-bottom: 10px;
+  width: 60%;
+  
+}
+.update{
+  color: black; /* Oranje tekst */
+  background-color: orange; /* Transparante achtergrond */
+  font-weight: bold;
+  border: none;
+  border-radius: 5px; /* Afgeronde hoeken */
+  width: 60%;
+  
+}
+.delete:hover , .update:hover{
+  cursor: pointer;
 }

@@ -1,3 +1,42 @@
+<?php
+
+    $naamErr = $ingredientenErr = $prijsErr = "";
+    $naam    = $ingredienten    = $prijs    = "";
+
+    function test_input($data)
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (empty($_POST["naam"])) {
+            $naamErr = "Naam is niet ingevuld";
+        } else {
+            $naam = test_input($_POST["naam"]);
+        }
+
+        if (empty($_POST["prijs"])) {
+            $prijsErr = "Prijs is niet ingevuld";
+        } else {
+            $prijs = test_input($_POST["prijs"]);
+        }
+
+        if (empty($_POST["ingredienten"])) {
+            $ingredientenErr = "Veld is niet ingevuld";
+        } else {
+            $ingredienten = test_input($_POST["ingredienten"]);
+        }
+
+    }
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +44,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editmenu</title>
     <link rel="stylesheet" href="css/editmenu.css">
+
+<style>
+
+    span{
+        color:red;
+    }
+</style>
+
+
 </head>
 <body>
 
@@ -16,15 +64,15 @@
 
 <!-- ---------------------------------------------------------------------------- -->
 <label for="naam"></label>
-<input type="text" id="naam" name="naam" placeholder="Naam van het gerecht">
+<input type="text" id="naam" name="naam" placeholder="Naam van het gerecht"> <span><?php echo $naamErr ?></span>
 <br>
 <!-- ---------------------------------------------------------------------------- -->
 <label for="prijs"></label>
-<input type="double" id="prijs" name="prijs"  placeholder="Prijs"  >
+<input type="double" id="prijs" name="prijs"  placeholder="Prijs"  > <span><?php echo $prijsErr ?></span>
 <br>
 <!-- -------------------------------------------------------------------------- -->
 <label for="Ingredienten"></label>
-<textarea rows="5" cols="50" id="ingredienten" name="ingredienten" placeholder="Ingredienten"></textarea>
+<textarea rows="5" cols="50" id="ingredienten" name="ingredienten" placeholder="Ingredienten"></textarea> <span><?php echo $ingredientenErr ?></span>
 <br>
 
 <!-- ------------------------------------------------------------------------------------------ -->
@@ -88,8 +136,8 @@
     <td>" . $result['dieet'] . "</td>
     <td>" . "€" . $result['prijs'] . "</td>
     <td>
-    <a href='editmenu.php? id=" . $result['id'] . " ' class= 'btn1'>Delete</a>
-    <a href='menuUpdate.php? id=" . $result['id'] . " ' class= 'btn2'>Update</a>
+    <a href='editmenu.php? id=" . $result['id'] . " ' class= 'btn1'>  <button class='delete'>Delete</button></a>
+    <a href='menuUpdate.php? id=" . $result['id'] . " ' class= 'btn2'><button class='update'>Update</button></a> </td>
 
 </tr>";
 

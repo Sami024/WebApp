@@ -2,52 +2,36 @@
 
 require 'connectDB.php';
 
-$naam = $_POST['naam'];
-$dieet = $_POST['dieet'];
-$ingredienten = $_POST['ingredienten'];
-$soort = $_POST['soort'];
-$prijs = $_POST['prijs'];
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-if (empty($naam) || empty($dieet) || empty($ingredienten) || empty($soort) || empty($prijs)) {
-    die('Please fill all the fields.');
-    
-}
-
-if (!is_numeric($prijs)) {
-    die('Price must be a number.');
-}
+    $naam         = $_POST['naam'];
+    $dieet        = $_POST['dieet'];
+    $ingredienten = $_POST['ingredienten'];
+    $soort        = $_POST['soort'];
+    $prijs        = $_POST['prijs'];
 
 
 
-
-
-
-
-
-
-
-
-$host='localhost';
-$dbname='restaurant';
-$username='root';
-$password='';
-
-$conn=mysqli_connect($host, $username, $password, $dbname);
-
-if (mysqli_connect_errno()) {
-    die('Could not connect: ' . mysqli_connect_error());
-}
-
-
-$sql = "INSERT INTO food (soort, naam,ingredienten,dieet,prijs)
- VALUES (?,?,?,?,?)";
- $stmt=mysqli_stmt_init($conn);
-
-if(! mysqli_stmt_prepare($stmt, $sql)) {
-    die( mysqli_error($conn));
-}
-mysqli_stmt_bind_param($stmt, 'ssssd', $soort, $naam, $ingredienten, $dieet, $prijs);
-mysqli_stmt_execute($stmt);
-echo 'Message sent';
-header("Location: editmenu.php");
-
+$host     = 'localhost';
+$dbname   = 'restaurant';
+$username = 'root';
+$password = '';
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  
+    // prepare sql and bind parameters
+    $stmt = $conn->prepare("INSERT INTO food (soort, naam,ingredienten,dieet,prijs) VALUES (:soort, :naam, :ingredienten, :dieet, :prijs)");
+    $stmt->bindParam(':soort', $soort);
+    $stmt->bindParam(':naam', $naam);
+    $stmt->bindParam(':ingredienten', $ingredienten);
+    $stmt->bindParam(':dieet', $dieet);
+    $stmt->bindParam(':prijs', $prijs);
+    $stmt->execute();
+    echo "New records created successfully";
+    header("Location: editmenu.php");
+  } catch(PDOException $e) {
+    echo "Error: " . $e->getMessage();
+  }
+  $conn = null;
