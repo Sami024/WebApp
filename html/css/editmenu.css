@@ -140,7 +140,7 @@ input[type="text"] {
   border-radius: 5px; /* Afronde hoeken */
 }
 input[type="double"] {
-  width: 50%; /* Volledige breedte */
+  width: 20%; /* Volledige breedte */
   padding: 10px; /* Extra padding */
   margin: 5px 0; /* Boven en onder marge */
   box-sizing: border-box; /* Inclusief padding en border */
@@ -220,10 +220,7 @@ font-size:1.2em ;
   display: inline; 
   margin-right: 10px;
 }
-input[type="double"] {
-  width: 10%;
 
-}
 .available{
   
   margin-bottom: 2px;

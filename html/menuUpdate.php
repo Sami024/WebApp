@@ -1,5 +1,6 @@
 
 <?php
+
     $conn = mysqli_connect("localhost", "root", "", "restaurant");
 
     $s_id    = $_GET['id'];
@@ -47,11 +48,11 @@
 <!-- ------------------------------------------------------------------------------------------------------ -->
 <label for="prijs"></label>
 <h4>Prijs</h4>
-<input type="double" id="prijs" name="prijs"value="<?php echo "€" . $row['prijs'] ?>" required >
+<input type="double" id="prijs" name="prijs"  value="<?php echo $row['prijs'] ?>"  >
 <br>
 <legend>Ingredienten</legend>
 <label for="Ingredienten"></label>
-<textarea rows="5" cols="50" id="ingredienten" name="ingredienten" required >
+<textarea rows="5" cols="50" id="ingredienten" name="ingredienten" >
 
 <?php echo $row['ingredienten'] ?>
 </textarea>
@@ -109,7 +110,7 @@
     <td>" . $result['naam'] . "</td>
     <td>" . $result['ingredienten'] . "</td>
     <td>" . $result['dieet'] . "</td>
-    <td>" ."€". $result['prijs'] . "</td>
+    <td>" . "€" . $result['prijs'] . "</td>
 
 
 </tr>";

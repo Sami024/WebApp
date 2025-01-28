@@ -1,8 +1,9 @@
 <?php
 
-require 'connectDB.php';
 
-// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+ if (($_SERVER["REQUEST_METHOD"] == "POST")&& ($_POST['naam'] != "") &&($_POST['ingredienten'] != "") && ($_POST['prijs'] != "")) {
+
 
     $naam         = $_POST['naam'];
     $dieet        = $_POST['dieet'];
@@ -32,6 +33,8 @@ try {
     echo "New records created successfully";
     header("Location: editmenu.php");
   } catch(PDOException $e) {
-    echo "Error: " . $e->getMessage();
+    echo "Error: Something went wrong " . $e->getMessage();
   }
-  $conn = null;
+  
+    echo "Error: no data inserted";
+}
