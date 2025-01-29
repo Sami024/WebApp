@@ -105,10 +105,15 @@ session_start();
     </div>
 <style>
 
-    span{
+   h3, span{
         color:red;
     }
+
+
+
+
 </style>
+
 
 
 </head>
@@ -116,7 +121,7 @@ session_start();
 <h3>Welkom je bent ingelogd als <?php echo $_SESSION["username"]?></h3>
     <div class="add-items">
      <h1>Add items to the Menu</h1>
-    <form action="editmenu.php" method="post">
+    <form action="user.php" method="post">
 
 <!-- ------------------------------------------------------------------------------------------------------------------------ -->
 
@@ -168,7 +173,7 @@ session_start();
     <th class="ingredienten">Ingredienten</th>
     <th class="dieet" >Dieet</th>
     <th class="prijs" >Prijs</th>
-    <th class="operation">Operation</th>
+    
 </tr>
 <?php
 
@@ -194,9 +199,8 @@ session_start();
     <td>" . $result['ingredienten'] . "</td>
     <td>" . $result['dieet'] . "</td>
     <td>" . "€" . $result['prijs'] . "</td>
-    <td>
-    <a href='editmenu.php? id=" . $result['id'] . " ' class= 'btn1'>  <button class='delete'>Delete</button></a>
-    <a href='menuUpdate.php? id=" . $result['id'] . " ' class= 'btn2'><button class='update'>Update</button></a> </td>
+    
+   
 
 </tr>";
 

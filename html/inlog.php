@@ -2,7 +2,8 @@
     session_start();
     $dsn        = 'mysql:host=localhost;dbname=restaurant';
     $dbusername = 'root';
-    $dbpassword = '';
+     $dbpassword = '';
+     $inlogError="";
 
     try {
         $connect = new PDO($dsn, $dbusername, $dbpassword);
@@ -10,7 +11,7 @@
         if (isset($_POST["login"])) {
 
             if (empty($_POST['username']) || empty($_POST['password'])) {
-                echo '<center><h1 style="color:red">Please fill all fields</h1></center>';
+                $inlogError = "Username or Password is Empty";
             } else {
 
                 $query     = "SELECT * FROM adminlog WHERE username=? AND password = ?";
@@ -24,11 +25,11 @@
 
                     } elseif ($_POST["username"] == "user") {
                         $_SESSION["username"] = $_POST["username"];
-                        header("Location: index.php");
+                        header("Location: user.php");
                     }
 
                 } else {
-                    echo '<center><h3 style="color:blue">Wrong login Data</h3></center>';
+                     $inlogError= "Username or Password is Wrong ";
                 }
             }
         }
@@ -61,11 +62,10 @@
             <li>
                 <a href="contact.php">Contact</a>
             </li>
-            <li>
-                <a href="inlog.php">Login</a>
-            </li>
         </ul>
     </div>
+
+    
 
 <h2>Login Admin & User</h2>
 
@@ -78,5 +78,7 @@
     </form>
 
     </div>
+    <h3 style="color:brown;" ><?php echo $inlogError?></h3>
+    
 </body>
 </html>

@@ -1,7 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap");
+* {
+   margin: 0 0; 
+  font-family: "Syne", sans-serif;
+
+}
+
 body {
-    background-color: white;
+    background-color: black;
     color: white;
-    font-family: "Arial", sans-serif;
+    
     margin: 0;
     padding: 0;
   }
@@ -15,12 +22,15 @@ body {
     padding: 20px 15px;
     background-color: white; /* Witte achtergrond */
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schaduw voor een 3D-effect */
+    
   }
-  
-  h2 {
-    font-size: 1.8rem;
-    color: black; /* Zwarte tekst */
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  h2,h3 {
+    font-size: 1.5rem;
+    color: white; /* Zwarte tekst */
     margin-bottom: 20px;
     text-align: center;
   }
@@ -74,6 +84,7 @@ body {
     align-items: center;
     background-color: black;
     height: 50px;
+    
   }
   .logo {
     width: 80px;
@@ -94,7 +105,7 @@ body {
     padding: 2%;
   }
   ul li a:hover {
-    color: #6947ff;
+    color: red;
     font-size: large;
   }
   

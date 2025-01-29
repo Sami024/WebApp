@@ -1,6 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap");
+* {
+   margin: 0 0; 
+  font-family: "Syne", sans-serif;
+
+}
 body {
   background-color: white; /* Witte achtergrond */
-  font-family: "Arial", sans-serif;
+
   margin: 0;
   padding: 0;
   height: 100vh; /* Vul volledige schermhoogte */
@@ -26,13 +32,22 @@ body {
   box-sizing: border-box;
 }
 
-h1  {
+h1 {
   text-align: center;
   font-size: 2rem;
   color: black; /* Zwarte tekst */
   border: 2px solid green;
   border-radius: 5px;
   background-color: #2fa35b; /* Lichte grijze achtergrond */
+  width: 100%;
+  margin-top: 0;
+}
+h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: black; /* Zwarte tekst */
+   border-radius: 5px;
+  background-color: #dbbfc8; /* Lichte grijze achtergrond */
   width: 100%;
   margin-top: 0;
 }
@@ -129,7 +144,8 @@ legend {
  
 } 
 a {
-  text-decoration: none; /* Geen onderstreping */
+  text-decoration: none;
+  color: white;
 }
 input[type="text"] {
   width: 50%; /* Volledige breedte */
@@ -163,7 +179,7 @@ select {
   border: 2px solid black; /* Zwarte rand */
   border-radius: 5px; /* Afronde hoeken */
 }
-.container {
+.container1 {
   width: 100%;
   margin: 0 auto;
   padding: 1%;
@@ -192,7 +208,7 @@ ul li {
   padding: 2%;
 }
 ul li a:hover {
-  color: #6947ff;
+  color: red;
   font-size: large;
 }
 
