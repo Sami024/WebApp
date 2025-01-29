@@ -82,7 +82,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editmenu</title>
     <link rel="stylesheet" href="css/editmenu.css">
+    <div class="container">
+        <div class="logo">
 
+            <img src="images/1598562279236_Twist-Food_Logo-1.png"
+                alt="Restaurant Logo" class="logo">
+        </div>
+
+        <ul>
+            <li>
+                <a href="index.php">Home</a>
+            </li>
+
+            <li>
+                <a href="contact.php">Contact</a>
+            </li>
+            <li>
+                <a href="inlog.php">Login</a>
+            </li>
+        </ul>
+    </div>
 <style>
 
     span{

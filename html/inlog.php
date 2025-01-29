@@ -46,8 +46,30 @@
     <link rel="stylesheet" href="css/inlog.css">
 </head>
 <body>
+<div class="container">
+        <div class="logo">
+
+            <img src="images/1598562279236_Twist-Food_Logo-1.png"
+                alt="Restaurant Logo" class="logo">
+        </div>
+
+        <ul>
+            <li>
+                <a href="index.php">Home</a>
+            </li>
+
+            <li>
+                <a href="contact.php">Contact</a>
+            </li>
+            <li>
+                <a href="inlog.php">Login</a>
+            </li>
+        </ul>
+    </div>
+
 <h2>Login Admin & User</h2>
-    <div class="container">
+
+    <div class="container1">
 
     <form method="post" action="">
       <input type="text" name="username" placeholder="Enter username" ><br>

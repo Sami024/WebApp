@@ -6,7 +6,7 @@ body {
     padding: 0;
   }
   
-  .container {
+  .container1 {
     width: 350px;
     height: auto;
     border: 5px solid #000; /* Zwarte rand */
@@ -65,4 +65,52 @@ body {
     background-color: #a80000; /* Nog donkerder rood bij klikken */
     transform: scale(1); /* Terug naar normale grootte */
   }
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 50px;
+  }
+  .logo {
+    width: 80px;
+    height: 100%;
+  }
+  ul {
+    width: 30%;
+    text-align: right;
+    list-style-type: none;
+    line-height: 15px;
+    margin-right: 50px;
+    font-weight: bold;
+    font-size: large;
+  }
   
+  ul li {
+    display: inline;
+    padding: 2%;
+  }
+  ul li a:hover {
+    color: #6947ff;
+    font-size: large;
+  }
+  
+  /* Header ends here -------------------------------------------------------------------------------------------*/
+  
+  .img-responsive {
+    width: 250px;
+    height: 250px;
+    align-self: center;
+  }
+  .img-curve {
+    border-radius: 10px;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-white {
+    color: white;
+  }

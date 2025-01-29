@@ -37,21 +37,8 @@
     <!-- Contact Section Starts Here -->
 
     <div class="container1">
-  <form action="action_page.php">
-
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-   
-
-    <label for="subject">Question</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-    <input type="submit" value="Submit">
-
-  </form>
+    <h2>    VISIT US AT OUR LOCATION</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27725.905327746754!2d-9.774706776004553!3d29.698369999987737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb47bfc7bccdfb7%3A0x99c2ca53010b5821!2sTwist%20Food!5e0!3m2!1sen!2snl!4v1738177036946!5m2!1sen!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
         <!-- Contact Section Ends Here -->
         <footer>

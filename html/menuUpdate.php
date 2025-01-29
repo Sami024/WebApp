@@ -37,7 +37,26 @@
 
 </head>
 <body>
+<div class="container">
+        <div class="logo">
 
+            <img src="images/1598562279236_Twist-Food_Logo-1.png"
+                alt="Restaurant Logo" class="logo">
+        </div>
+
+        <ul>
+            <li>
+                <a href="index.php">Home</a>
+            </li>
+
+            <li>
+                <a href="contact.php">Contact</a>
+            </li>
+            <li>
+                <a href="inlog.php">Login</a>
+            </li>
+        </ul>
+    </div>
 <div class="update-items">
     <h1> Update Item (ID=<?php echo $row['id'] ?>) from the Menu</h1>
     <form action="" method="post">
