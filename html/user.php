@@ -62,8 +62,7 @@ session_start();
         $stmt->bindParam(':dieet', $dieet);
         $stmt->bindParam(':prijs', $prijs);
         $stmt->execute();
-        echo "New records created successfully";
-        header("Location: editmenu.php");
+        header("Location: user.php");
       } catch(PDOException $e) {
         echo "Error: Something went wrong " . $e->getMessage();
       }
@@ -120,7 +119,7 @@ session_start();
 <body>
 <h3>Welkom je bent ingelogd als <?php echo $_SESSION["username"]?></h3>
     <div class="add-items">
-     <h1>Add items to the Menu</h1>
+     <h1>Voeg items toe in Menu</h1>
     <form action="user.php" method="post">
 
 <!-- ------------------------------------------------------------------------------------------------------------------------ -->
@@ -162,7 +161,7 @@ session_start();
 <!-- ---------------------------------------------------------------------------- -->
     </form>
     </div>
-    <p class="available" >Available Menu's</p>
+    <p class="available" >Beschikbare Menu items</p>
 
 <div>
 <table>

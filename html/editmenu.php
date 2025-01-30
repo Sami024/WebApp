@@ -90,14 +90,7 @@ session_start();
         </div>
 
         <ul>
-            <li>
-                <a href="index.php">Home</a>
-            </li>
-
-            <li>
-                <a href="contact.php">Contact</a>
-            </li>
-            <li>
+             <li>
                 <a href="logout.php">Logout
                 </a>
             </li>
@@ -149,7 +142,7 @@ session_start();
 <option value="Vegan">Vegan</option>
 <option value="Vegatarisch">Vegetarisch</option>
 <option value="Vlees"> Vlees</option>
-<option value=" Vis"> Visis</option>
+<option value=" Vis"> Vis</option>
 </select>
 <br>
 <!-- ------------------------------------------------------------------------------------------------------- -->

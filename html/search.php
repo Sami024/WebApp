@@ -1,5 +1,6 @@
 <?php
     require_once 'connectDB.php';
+    $searchError = "";
 
 ?>
 
@@ -46,7 +47,7 @@
 
             <form action="search.php" method="POST">
                 <input type="search" name="search" placeholder="Vul in wat je wilt zoeken.." required>
-                <input type="submit" name="submit" value="Zoeken" class="btn btn-primary">
+                <input type="submit"  value="Zoeken" class="zoeken">
             </form>
 
         </div>
@@ -91,20 +92,34 @@
     <!-- fOOD MEnu Section Starts Here -->
     <section class="food-menu">
         <h2 class="text-center">Food Menu</h2>
+
         <div class="container3">
             <?php
 
-                $query  = "SELECT * FROM food";
-                $result = $pdo->query($query);
-                while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                    echo "<div class='food-menu-box'>";
-                    echo "<h4>" . htmlspecialchars($row['naam']) . "</h4>";
-                    echo "<h5>Ingredienten : </h5>";
-                    echo "<p class='ingredienten'>" . htmlspecialchars($row['ingredienten']) . "</p>";
-                    echo "</div>";
+                if (isset($_POST['search'])) {
+
+                    $search = $_POST['search'];
+                    $query  = "SELECT * FROM food WHERE naam LIKE '%$search%' OR ingredienten LIKE '%$search%'";
+                    $result = $pdo->query($query);
+
+                    if ($result->rowCount() == 0) {
+                        $searchError = "Geen resultaten gevonden";
+                    } else {
+                        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                            echo "<div class='food-menu-box'>";
+                            echo "<h4>" . htmlspecialchars($row['naam']) . "</h4>";
+                            echo "<h5>Ingredienten : </h5>";
+                            echo "<p class='ingredienten'>" . htmlspecialchars($row['ingredienten']) . "</p>";
+                            echo "<p class='prijs' >Prijs : " .'€'. htmlspecialchars($row['prijs']);
+                            echo "</div>";
+                        }
+                    }
                 }
             ?>
+
+
         </div>
+        <h1 style="color: green;" ><?php echo $searchError ?></h1>
     </section>
 
     <!-- fOOD MEnu Section Ends Here -->

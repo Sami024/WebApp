@@ -108,7 +108,8 @@ form {
   border: none;
   border-radius: 5px;
   background-color: black;
-color: white;
+  color: white;
+  margin-right: 5px;
 }
 ::placeholder {
   color: white;
@@ -174,11 +175,7 @@ h3 {
 
 /* CSS for Food Menu */
 .food-menu {
-  /* padding: 0; */
-  /* width: 95%; */
-  /* padding: 4% 0;  */
-  /* margin-top: 10px;
-  margin-bottom: 10px;  */
+  text-align: center;
   background-color: transparent;
 }
 .food-menu-box {

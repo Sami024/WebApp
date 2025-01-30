@@ -43,8 +43,9 @@ require_once 'connectDB.php';
     <section class="food-search text-center">
         <div class="container1">
 
-            <form action="food-search.html" method="POST">
-                <input type="search" name="search" placeholder="Search for Food.." required>
+        <form action="search.php" method="POST">
+                <input type="search" name="search" placeholder="Vul in wat je wilt zoeken.." required>
+                <input type="submit" name="submit" value="Zoeken" class="btn btn-primary">
             </form>
 
         </div>
