@@ -2,8 +2,8 @@
     session_start();
     $dsn        = 'mysql:host=localhost;dbname=restaurant';
     $dbusername = 'root';
-     $dbpassword = '';
-     $inlogError="";
+    $dbpassword = '';
+    $inlogError = "";
 
     try {
         $connect = new PDO($dsn, $dbusername, $dbpassword);
@@ -29,7 +29,7 @@
                     }
 
                 } else {
-                     $inlogError= "Username or Password is Wrong ";
+                    $inlogError = "Username or Password is Wrong ";
                 }
             }
         }
@@ -65,7 +65,7 @@
         </ul>
     </div>
 
-    
+
 
 <h2>Login Admin & User</h2>
 
@@ -78,7 +78,13 @@
     </form>
 
     </div>
-    <h3 style="color:brown;" ><?php echo $inlogError?></h3>
-    
+    <h3 style="color:brown;" ><?php echo $inlogError ?></h3>
+
+    <footer>
+        <div class="container4">
+            <p>All rights reserved. <br>  Made By Sami Benouari</p>
+        </div>
+    </footer>
+
 </body>
 </html>

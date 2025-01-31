@@ -46,7 +46,7 @@
             <p>All rights reserved. <br>  Made By Sami Benouari</p>
         </div>
         <br>
-        <h3 style="text-align:center">VISIT US AT OUR LOCATION</h3>
+        <h3>VISIT US AT OUR LOCATION</h3>
     </footer>
     </section>
     <!-- footer Section Ends Here -->

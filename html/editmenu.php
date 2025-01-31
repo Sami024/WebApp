@@ -1,5 +1,5 @@
 <?php
-session_start();
+    session_start();
     $naamErr = $ingredientenErr = $prijsErr = "";
     $naam    = $ingredienten    = $prijs    = "";
 
@@ -21,7 +21,7 @@ session_start();
         if (empty($_POST["prijs"])) {
             $prijsErr = "Prijs is niet ingevuld";
 
-        } elseif (!is_numeric($_POST["prijs"])) {
+        } elseif (! is_numeric($_POST["prijs"])) {
             $prijsErr = "Alleen cijfers zijn toegestaan";
         } else {
             $prijs = test_input($_POST["prijs"]);
@@ -34,47 +34,40 @@ session_start();
         }
 
     }
-    if (($_SERVER["REQUEST_METHOD"] == "POST")&& ($_POST['naam'] != "") &&($_POST['ingredienten'] != "") && ($_POST['prijs'] != "")) {
-
+    if (($_SERVER["REQUEST_METHOD"] == "POST") && ($_POST['naam'] != "") && ($_POST['ingredienten'] != "") && ($_POST['prijs'] != "")) {
 
         $naam         = $_POST['naam'];
         $dieet        = $_POST['dieet'];
         $ingredienten = $_POST['ingredienten'];
         $soort        = $_POST['soort'];
         $prijs        = $_POST['prijs'];
-    
-    
-    
-    $host     = 'localhost';
-    $dbname   = 'restaurant';
-    $username = 'root';
-    $password = '';
-    try {
-        $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-        // set the PDO error mode to exception
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      
-        // prepare sql and bind parameters
-        $stmt = $conn->prepare("INSERT INTO food (soort, naam,ingredienten,dieet,prijs) VALUES (:soort, :naam, :ingredienten, :dieet, :prijs)");
-        $stmt->bindParam(':soort', $soort);
-        $stmt->bindParam(':naam', $naam);
-        $stmt->bindParam(':ingredienten', $ingredienten);
-        $stmt->bindParam(':dieet', $dieet);
-        $stmt->bindParam(':prijs', $prijs);
-        $stmt->execute();
-        echo "New records created successfully";
-        header("Location: editmenu.php");
-      } catch(PDOException $e) {
-        echo "Error: Something went wrong " . $e->getMessage();
-      }
-      
+
+        $host     = 'localhost';
+        $dbname   = 'restaurant';
+        $username = 'root';
+        $password = '';
+        try {
+            $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            // prepare sql and bind parameters
+            $stmt = $conn->prepare("INSERT INTO food (soort, naam,ingredienten,dieet,prijs) VALUES (:soort, :naam, :ingredienten, :dieet, :prijs)");
+            $stmt->bindParam(':soort', $soort);
+            $stmt->bindParam(':naam', $naam);
+            $stmt->bindParam(':ingredienten', $ingredienten);
+            $stmt->bindParam(':dieet', $dieet);
+            $stmt->bindParam(':prijs', $prijs);
+            $stmt->execute();
+            echo "New records created successfully";
+            header("Location: editmenu.php");
+        } catch (PDOException $e) {
+            echo "Error: Something went wrong " . $e->getMessage();
+        }
+
         echo "Error: no data inserted";
     }
 ?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,6 +75,8 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editmenu</title>
     <link rel="stylesheet" href="css/editmenu.css">
+    </head>
+    <body>
     <div class="container1">
         <div class="logo">
 
@@ -96,19 +91,9 @@ session_start();
             </li>
         </ul>
     </div>
-<style>
-
-    span{
-        color:red;
-    }
-</style>
-
-
-</head>
-<body>
-<h3>Welkom je bent ingelogd als <?php echo $_SESSION["username"]?></h3>
+<h3>Welkom je bent ingelogd als                                <?php echo $_SESSION["username"] ?></h3>
     <div class="add-items">
-     <h1>Add items to the Menu</h1>
+     <h1>Voeg items toe in Menu</h1>
     <form action="editmenu.php" method="post">
 
 <!-- ------------------------------------------------------------------------------------------------------------------------ -->
@@ -150,7 +135,7 @@ session_start();
 <!-- ---------------------------------------------------------------------------- -->
     </form>
     </div>
-    <p class="available" >Available Menu's</p>
+    <p class="available" >Beschikbare Menu items</p>
 
 <div>
 <table>

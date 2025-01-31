@@ -1,5 +1,5 @@
 <?php
-session_start();
+    session_start();
     $naamErr = $ingredientenErr = $prijsErr = "";
     $naam    = $ingredienten    = $prijs    = "";
 
@@ -21,7 +21,7 @@ session_start();
         if (empty($_POST["prijs"])) {
             $prijsErr = "Prijs is niet ingevuld";
 
-        } elseif (!is_numeric($_POST["prijs"])) {
+        } elseif (! is_numeric($_POST["prijs"])) {
             $prijsErr = "Alleen cijfers zijn toegestaan";
         } else {
             $prijs = test_input($_POST["prijs"]);
@@ -34,39 +34,36 @@ session_start();
         }
 
     }
-    if (($_SERVER["REQUEST_METHOD"] == "POST")&& ($_POST['naam'] != "") &&($_POST['ingredienten'] != "") && ($_POST['prijs'] != "")) {
-
+    if (($_SERVER["REQUEST_METHOD"] == "POST") && ($_POST['naam'] != "") && ($_POST['ingredienten'] != "") && ($_POST['prijs'] != "")) {
 
         $naam         = $_POST['naam'];
         $dieet        = $_POST['dieet'];
         $ingredienten = $_POST['ingredienten'];
         $soort        = $_POST['soort'];
         $prijs        = $_POST['prijs'];
-    
-    
-    
-    $host     = 'localhost';
-    $dbname   = 'restaurant';
-    $username = 'root';
-    $password = '';
-    try {
-        $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-        // set the PDO error mode to exception
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      
-        // prepare sql and bind parameters
-        $stmt = $conn->prepare("INSERT INTO food (soort, naam,ingredienten,dieet,prijs) VALUES (:soort, :naam, :ingredienten, :dieet, :prijs)");
-        $stmt->bindParam(':soort', $soort);
-        $stmt->bindParam(':naam', $naam);
-        $stmt->bindParam(':ingredienten', $ingredienten);
-        $stmt->bindParam(':dieet', $dieet);
-        $stmt->bindParam(':prijs', $prijs);
-        $stmt->execute();
-        header("Location: user.php");
-      } catch(PDOException $e) {
-        echo "Error: Something went wrong " . $e->getMessage();
-      }
-      
+
+        $host     = 'localhost';
+        $dbname   = 'restaurant';
+        $username = 'root';
+        $password = '';
+        try {
+            $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            // prepare sql and bind parameters
+            $stmt = $conn->prepare("INSERT INTO food (soort, naam,ingredienten,dieet,prijs) VALUES (:soort, :naam, :ingredienten, :dieet, :prijs)");
+            $stmt->bindParam(':soort', $soort);
+            $stmt->bindParam(':naam', $naam);
+            $stmt->bindParam(':ingredienten', $ingredienten);
+            $stmt->bindParam(':dieet', $dieet);
+            $stmt->bindParam(':prijs', $prijs);
+            $stmt->execute();
+            header("Location: user.php");
+        } catch (PDOException $e) {
+            echo "Error: Something went wrong " . $e->getMessage();
+        }
+
         echo "Error: no data inserted";
     }
 ?>
@@ -90,13 +87,6 @@ session_start();
 
         <ul>
             <li>
-                <a href="index.php">Home</a>
-            </li>
-
-            <li>
-                <a href="contact.php">Contact</a>
-            </li>
-            <li>
                 <a href="logout.php">Logout
                 </a>
             </li>
@@ -117,7 +107,7 @@ session_start();
 
 </head>
 <body>
-<h3>Welkom je bent ingelogd als <?php echo $_SESSION["username"]?></h3>
+<h3 style="color: black;">Welkom je bent ingelogd als                                                                                                           <?php echo $_SESSION["username"] ?></h3>
     <div class="add-items">
      <h1>Voeg items toe in Menu</h1>
     <form action="user.php" method="post">
@@ -172,7 +162,7 @@ session_start();
     <th class="ingredienten">Ingredienten</th>
     <th class="dieet" >Dieet</th>
     <th class="prijs" >Prijs</th>
-    
+
 </tr>
 <?php
 
@@ -198,8 +188,8 @@ session_start();
     <td>" . $result['ingredienten'] . "</td>
     <td>" . $result['dieet'] . "</td>
     <td>" . "€" . $result['prijs'] . "</td>
-    
-   
+
+
 
 </tr>";
 

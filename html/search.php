@@ -9,11 +9,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- Important to make website responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twist Food</title>
-
-    <!-- Link our CSS file -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -110,7 +107,7 @@
                             echo "<h4>" . htmlspecialchars($row['naam']) . "</h4>";
                             echo "<h5>Ingredienten : </h5>";
                             echo "<p class='ingredienten'>" . htmlspecialchars($row['ingredienten']) . "</p>";
-                            echo "<p class='prijs' >Prijs : " .'€'. htmlspecialchars($row['prijs']);
+                            echo "<p class='prijs' >Prijs : " . '€' . htmlspecialchars($row['prijs']);
                             echo "</div>";
                         }
                     }

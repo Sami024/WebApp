@@ -1,5 +1,5 @@
 <?php
-require_once 'connectDB.php';
+    require_once 'connectDB.php';
 ?>
 
 <!DOCTYPE html>
@@ -7,26 +7,24 @@ require_once 'connectDB.php';
 
 <head>
     <meta charset="UTF-8">
-    <!-- Important to make website responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TwistFood</title>
-
-    <!-- Link our CSS file -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="container">
+<div class="container">
         <div class="logo">
 
             <img src="images/1598562279236_Twist-Food_Logo-1.png"
-                alt="Restaurant Logo" class="img-responsive">
+                alt="Restaurant Logo" class="logo">
         </div>
 
         <ul>
             <li>
                 <a href="index.php">Home</a>
             </li>
+
             <li>
                 <a href="contact.php">Contact</a>
             </li>
@@ -44,7 +42,7 @@ require_once 'connectDB.php';
 
         <form action="search.php" method="POST">
                 <input type="search" name="search" placeholder="Vul in wat je wilt zoeken.." required>
-                <input type="submit" name="submit" value="Zoeken" class="btn btn-primary">
+                <input type="submit" name="submit" value="Zoeken" class="searchbtn ">
             </form>
 
         </div>
@@ -90,16 +88,16 @@ require_once 'connectDB.php';
         <div class="container3">
             <?php
 
-            $query = "SELECT * FROM food where soort = 'pizza'";
-            $result = $pdo->query($query);
-            while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                echo "<div class='food-menu-box'>";
-                echo "<h4>" . htmlspecialchars($row['naam']) . "</h4>";
-                echo "<h5>Ingredienten : </h5>";
-                echo "<p class='ingredienten'>" . htmlspecialchars($row['ingredienten']) . "</p>";
-                echo "<p class='prijs' >Prijs : " .'€'. htmlspecialchars($row['prijs']);
-                echo "</div>";
-            }
+                $query  = "SELECT * FROM food where soort = 'pizza'";
+                $result = $pdo->query($query);
+                while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                    echo "<div class='food-menu-box'>";
+                    echo "<h4>" . htmlspecialchars($row['naam']) . "</h4>";
+                    echo "<h5>Ingredienten : </h5>";
+                    echo "<p class='ingredienten'>" . htmlspecialchars($row['ingredienten']) . "</p>";
+                    echo "<p class='prijs' >Prijs : " . '€' . htmlspecialchars($row['prijs']);
+                    echo "</div>";
+                }
             ?>
         </div>
     </section>

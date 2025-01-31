@@ -8,11 +8,8 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twist Food</title>
-
-
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -63,7 +60,7 @@
                 <div class="box-3 ">
                 <a href="pizza.php"> <img src="images/pizza.jpg" alt="Pizza" class="img-responsive img-curve">  </a>
 
-                    <h3 >Pizza</h3> 
+                    <h3 >Pizza</h3>
                 </div>
 
 
@@ -71,7 +68,7 @@
                 <div class="box-3 ">
                 <a href="broodjes.php"> <img src="images/doner-kebab-3-1080x960.jpg" alt="Broodje" class="img-responsive img-curve"> </a>
 
-                    <h3 >Broodjes</h3> 
+                    <h3 >Broodjes</h3>
                 </div>
 
 
@@ -79,7 +76,7 @@
                 <div class="box-3 ">
                 <a href="schotels.php"><img src="images/ribeye-steak-met-chilisaus-salade-noedels-mais-in-een-schotel-bovenaanzicht-op-donkere-achtergrond_689047-1919.avif" alt="Schotels" class="img-responsive img-curve"> </a>
 
-                    <h3 >Schotels</h3> 
+                    <h3 >Schotels</h3>
                 </div>
 
 

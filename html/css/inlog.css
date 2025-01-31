@@ -1,127 +1,138 @@
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap");
 * {
-   margin: 0 0; 
+  margin: 0 0;
   font-family: "Syne", sans-serif;
-
 }
 
 body {
-    background-color: black;
-    color: white;
-    
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container1 {
-    width: 350px;
-    height: auto;
-    border: 5px solid #000; /* Zwarte rand */
-    border-radius: 20px;
-    margin: 50px auto;
-    padding: 20px 15px;
-    background-color: white; /* Witte achtergrond */
-    text-align: center;
-    
-  }
-  a {
-    text-decoration: none;
-    color: white;
-  }
-  h2,h3 {
-    font-size: 1.5rem;
-    color: white; /* Zwarte tekst */
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  form input {
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    padding: 10px;
-    text-align: center;
-    background-color: #f7f7f7; /* Lichtgrijze achtergrond */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  form input:focus {
-    outline: none;
-    border: 1px solid #ff0000; /* Rood wanneer geselecteerd */
-  }
-  
-  input[type="submit"] {
-    background-color: #ff0000; /* Rode achtergrond */
-    color: white; /* Witte tekst */
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 10px;
-    width: 50%;
-    height: 40px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #cc0000; /* Donkerdere rode tint bij hover */
-    transform: scale(1.05); /* Licht vergroten bij hover */
-  }
-  
-  input[type="submit"]:active {
-    background-color: #a80000; /* Nog donkerder rood bij klikken */
-    transform: scale(1); /* Terug naar normale grootte */
-  }
-  .container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 1%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    height: 50px;
-    
-  }
-  .logo {
-    width: 80px;
-    height: 100%;
-  }
-  ul {
-    width: 30%;
-    text-align: right;
-    list-style-type: none;
-    line-height: 15px;
-    margin-right: 50px;
-    font-weight: bold;
-    font-size: large;
-  }
-  
-  ul li {
-    display: inline;
-    padding: 2%;
-  }
-  ul li a:hover {
-    color: red;
-    font-size: large;
-  }
-  
-  /* Header ends here -------------------------------------------------------------------------------------------*/
-  
-  .img-responsive {
-    width: 250px;
-    height: 250px;
-    align-self: center;
-  }
-  .img-curve {
-    border-radius: 10px;
-  }
-  .text-center {
-    text-align: center;
-  }
-  .text-white {
-    color: white;
-  }
+  background-color: black;
+  color: white;
+
+}
+
+/* header start hier */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  height: 50px;
+  border-bottom: 2px solid white;
+}
+.logo {
+  width: 80px;
+  height: 100%;
+}
+ul {
+  width: 30%;
+  text-align: right;
+  list-style-type: none;
+  line-height: 15px;
+  margin-right: 50px;
+  font-weight: bold;
+  font-size: large;
+}
+
+ul li {
+  display: inline;
+  padding: 2%;
+}
+ul li a:hover {
+  color: red;
+  font-size: large;
+}
+/* header eindigt hier */
+
+.container1 {
+  width: 350px;
+  height: auto;
+  border: 5px solid #000;
+  border-radius: 20px;
+  margin: 50px auto;
+  padding: 20px 15px;
+  background-color: white;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+h2,
+h3 {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form input {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form input:focus {
+  outline: none;
+  border: 1px solid #ff0000;
+}
+
+input[type="submit"] {
+  background-color: #ff0000;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 50%;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+input[type="submit"]:active {
+  background-color: #a80000;
+  transform: scale(1);
+}
+
+/* Header ends here -------------------------------------------------------------------------------------------*/
+
+.img-responsive {
+  width: 250px;
+  height: 250px;
+  align-self: center;
+}
+.img-curve {
+  border-radius: 10px;
+}
+.text-center {
+  text-align: center;
+}
+.text-white {
+  color: white;
+}
+
+.container4 {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-top: white 2px solid;
+}

@@ -16,11 +16,11 @@
 </head>
 
 <body>
-    <div class="container">
+<div class="container">
         <div class="logo">
 
             <img src="images/1598562279236_Twist-Food_Logo-1.png"
-                alt="Restaurant Logo" class="img-responsive">
+                alt="Restaurant Logo" class="logo">
         </div>
 
         <ul>
@@ -45,9 +45,8 @@
 
         <form action="search.php" method="POST">
                 <input type="search" name="search" placeholder="Vul in wat je wilt zoeken.." required>
-                <input type="submit" name="submit" value="Zoeken" class="btn btn-primary">
+                <input type="submit" name="submit" value="Zoeken" class="searchbtn ">
             </form>
-
         </div>
     </section>
     <!-- fOOD sEARCH Section Ends Here -->
@@ -98,7 +97,7 @@
                     echo "<h4>" . htmlspecialchars($row['naam']) . "</h4>";
                     echo "<h5>Ingredienten : </h5>";
                     echo "<p class='ingredienten'>" . htmlspecialchars($row['ingredienten']) . "</p>";
-                    echo "<p class='prijs' >Prijs : " .'€'. htmlspecialchars($row['prijs']);
+                    echo "<p class='prijs' >Prijs : " . '€' . htmlspecialchars($row['prijs']);
                     echo "</div>";
                 }
             ?>

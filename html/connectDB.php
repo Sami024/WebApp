@@ -1,18 +1,11 @@
 <?php
-$dsn = 'mysql:host=localhost;dbname=restaurant';
-$dbusername = 'root';
-$dbpassword = '';
+    $dsn        = 'mysql:host=localhost;dbname=restaurant';
+    $dbusername = 'root';
+    $dbpassword = '';
 
-try {
-    $pdo = new PDO($dsn, $dbusername, $dbpassword);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    try {
+        $pdo = new PDO($dsn, $dbusername, $dbpassword);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
-   echo "Connection failed: " . $e->getMessage();
+        echo "Connection failed: " . $e->getMessage();
 }
-?>
-
-
-
-
-
-
