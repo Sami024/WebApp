@@ -98,6 +98,7 @@
                     echo "<h4>" . htmlspecialchars($row['naam']) . "</h4>";
                     echo "<h5>Ingredienten : </h5>";
                     echo "<p class='ingredienten'>" . htmlspecialchars($row['ingredienten']) . "</p>";
+                    echo "<p class='prijs' >Prijs : " .'€'. htmlspecialchars($row['prijs']);
                     echo "</div>";
                 }
             ?>

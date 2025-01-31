@@ -8,15 +8,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- Important to make website responsive -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twist Food</title>
 
-    <!-- Link our CSS file -->
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <!-- Header begint hier -->
     <div class="container">
         <div class="logo">
 
@@ -38,59 +39,58 @@
         </ul>
     </div>
 
-    <!-- Navbar Section Ends Here -->
+    <!-- Header eindigt hier -->
 
-    <!-- fOOD sEARCH Section Starts Here -->
+    <!-- SEARCH Start hier -->
     <section class="food-search text-center">
         <div class="container1">
 
             <form action="search.php" method="POST">
                 <input type="search" name="search" placeholder="Vul in wat je wilt zoeken.." required>
-                <input type="submit" name="submit" value="Zoeken" class="btn btn-primary">
+                <input type="submit" name="submit" value="Zoeken" class="searchbtn ">
             </form>
 
         </div>
     </section>
-    <!-- fOOD sEARCH Section Ends Here -->
+    <!-- SEARCH Endigt hier -->
 
-    <!-- Categories Section Starts Here  -->
+
+    <!-- Categories Section Start hier  -->
     <section class="categories">
 
         <div class="container2">
-            <a href="pizza.php">
+
                 <div class="box-3 ">
-                    <img src="images/pizza.jpg" alt="Pizza" class="img-responsive img-curve">
+                <a href="pizza.php"> <img src="images/pizza.jpg" alt="Pizza" class="img-responsive img-curve">  </a>
 
-                    <h3 class="text-black">Pizza</h3>
+                    <h3 >Pizza</h3> 
                 </div>
-            </a>
 
-            <a href="broodjes.php">
+
+
                 <div class="box-3 ">
-                    <img src="images/doner-kebab-3-1080x960.jpg" alt="Broodje" class="img-responsive img-curve">
+                <a href="broodjes.php"> <img src="images/doner-kebab-3-1080x960.jpg" alt="Broodje" class="img-responsive img-curve"> </a>
 
-                    <h3 class="text-black">Broodjes</h3>
+                    <h3 >Broodjes</h3> 
                 </div>
-            </a>
 
-            <a href="schotels.php">
+
+
                 <div class="box-3 ">
-                    <img src="images/ribeye-steak-met-chilisaus-salade-noedels-mais-in-een-schotel-bovenaanzicht-op-donkere-achtergrond_689047-1919.avif" alt="Schotels" class="img-responsive img-curve">
+                <a href="schotels.php"><img src="images/ribeye-steak-met-chilisaus-salade-noedels-mais-in-een-schotel-bovenaanzicht-op-donkere-achtergrond_689047-1919.avif" alt="Schotels" class="img-responsive img-curve"> </a>
 
-                    <h3 class="text-black ">Schotels</h3>
+                    <h3 >Schotels</h3> 
                 </div>
-            </a>
+
 
         </div>
     </section>
 
-    <!-- Categories Section Ends Here -->
+    <!-- Categories Section eindigt hier  -->
 
-    <div class="spacing"></div>
-
-    <!-- fOOD MEnu Section Starts Here -->
+    <!--  MEnu  Start hier -->
     <section class="food-menu">
-        <h2 class="text-center">Food Menu</h2>
+        <h2 class="text-center">Menu</h2>
         <div class="container3">
             <?php
 
@@ -101,19 +101,20 @@
                     echo "<h4>" . htmlspecialchars($row['naam']) . "</h4>";
                     echo "<h5>Ingredienten : </h5>";
                     echo "<p class='ingredienten'>" . htmlspecialchars($row['ingredienten']) . "</p>";
+                    echo "<p class='prijs' >Prijs : " . '€' . htmlspecialchars($row['prijs']);
                     echo "</div>";
                 }
             ?>
         </div>
     </section>
 
-    <!-- fOOD MEnu Section Ends Here -->
-    <!-- footer Section Starts Here -->
+    <!--  Menu eindigt hier -->
+
     <footer>
         <div class="container4">
             <p>All rights reserved. <br>  Made By Sami Benouari</p>
         </div>
     </footer>
-    <!-- footer Section Ends Here -->
+
 </body>
 </html>

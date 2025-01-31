@@ -1,9 +1,7 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600&display=swap");
 * {
-   margin: 0 0; 
+  margin: 0 0;
   font-family: "Syne", sans-serif;
-
 }
 /* Header start here -----------------------------------------------------------------------------------------*/
 
@@ -47,7 +45,7 @@ ul li {
   padding: 2%;
 }
 ul li a:hover {
-  color: #6947ff;
+  color: #0cd460;
   font-size: large;
 }
 
@@ -56,7 +54,8 @@ ul li a:hover {
 .img-responsive {
   width: 250px;
   height: 250px;
-  align-self: center;
+
+  /* align-self: center; */
 }
 .img-curve {
   border-radius: 10px;
@@ -68,7 +67,7 @@ ul li a:hover {
   color: white;
 }
 /* ------------------------------------------------------------------------------------------------------------ */
-/* <!-- fOOD SEARCH Section Starts Here -->-------------------------------------------------------------------- */
+/* <!--  SEARCH  start hier -->-------------------------------------------------------------------- */
 
 .container1 {
   width: 40%;
@@ -90,7 +89,6 @@ form {
   justify-content: flex-end;
   align-items: center;
   border-radius: 20px;
-  
 }
 .food-search {
   background-size: cover;
@@ -115,9 +113,19 @@ form {
   color: white;
   text-align: left;
 }
-/* <!-- fOOD SEARCH Section Ends Here -->---------------------------------------------------------------------- */
+.searchbtn {
+  background-color: rgb(37, 149, 177);
+  height: 40px;
+  width: 100px;
+  color: white;
+  cursor: pointer;
+  border-radius: 40px;
+  margin-left: 10px;
+  border: none;
+}
+/* <!--SEARCH eindigt hier -->---------------------------------------------------------------------- */
 
-/* <!-- Categories Section Starts Here  -->-------------------------------------------------------------------- */
+/* <!-- Categories  start hier  -->-------------------------------------------------------------------- */
 .container2 {
   width: 70%;
   margin: 0 auto;
@@ -127,7 +135,7 @@ form {
   justify-content: space-around;
   align-items: center;
   border: 2px solid white;
-  border-radius: 20px ;
+  border-radius: 20px;
   background-color: black;
 }
 .categories {
@@ -140,76 +148,26 @@ form {
   margin: 2%;
   text-align: center;
 }
-/*  <!-- Categories Section Ends Here-------------------------------------------------------------------------- */
+/*  <!-- Categories eindigt hier -------------------------------------------------------------------------- */
 a {
   color: white;
   text-decoration: none;
 }
 
-.btn {
-  padding: 1%;
-  border: none;
-  font-size: 1rem;
-  border-radius: 5px;
-}
-.btn-primary {
-  background-color: black;
-  color: white;
-  cursor: pointer;
-  border-radius: 40px;
-  margin-left: 10px;
-}
-.btn-primary:hover {
-  color: white;
-  background-color: black;
-}
 h2 {
   color: white;
   font-size: 2rem;
-  /* margin-bottom: 2%; */
 }
 h3 {
   font-size: 1.5rem;
   color: white;
 }
 
-/* CSS for Food Menu */
-.food-menu {
-  text-align: center;
-  background-color: transparent;
-}
-.food-menu-box {
-  width: 450px;
-  height: 120px;
-  background-color: white;
-  border: 2px solid white;
-  text-align: center;
-  border-radius: 20px;
-  color: black;
-}
-h4 {
-  color: black;
-  font-size: 1.2rem;
-  margin-top: 10px;
-  font-weight: bold;
-}
-h5 {
-  font-size: 1rem;
-  color: white;
-  text-align: left;
-  padding-left: 10px;
-  margin-top: 10px;
-}
-.ingredienten {
-  margin-top: 10px;
-  padding-left: 20px;
+/* Menu  begint hier------------------------------------------------------------------------------------------------------*/
 
-  text-align: left;
-}
 .container3 {
-  width: 70%;
+  width: 80%;
   padding: 1%;
-
   border: 2px solid white;
   gap: 5px;
   display: flex;
@@ -221,8 +179,48 @@ h5 {
   margin-left: auto;
   margin-right: auto;
 }
+.food-menu-box {
+  width: 450px;
+  height: 120px;
+  background-color: white;
+  border: 2px solid white;
+  text-align: center;
+  border-radius: 20px;
+  color: black;
+  position: relative;
+}
+h4 {
+  color: black;
+  font-size: 1.2rem;
+  margin-top: 5px;
+  font-weight: bold;
+}
+h5 {
+  font-size: 1rem;
 
-/* footer */
+  text-align: left;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+.ingredienten {
+  margin-top: 0;
+  padding-left: 20px;
+  text-align: left;
+}
+.prijs {
+  text-align: right;
+  padding-right: 10px;
+  color: rgb(19, 13, 4);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(206, 192, 192);
+  border-radius: 10px;
+  padding: 2px;
+  margin-right: 10px;
+}
+
+/* footer ---------------------------------------------------------------------------------------------------------------------*/
 .container4 {
   background-color: black;
   color: white;
@@ -240,15 +238,10 @@ h5 {
 
 @media only screen and (max-width: 768px) {
   .logo {
-    width: 10%;
+    width: 4.2rem;
     margin-left: 10px;
   }
-  .img-responsive {
-    width: 100%;
-    height: 80%;
-    align-self: center;
-  }
-
+ 
   .container ul {
     width: 50%;
     margin-left: 5px;
@@ -278,17 +271,11 @@ h5 {
     margin-bottom: 10px;
   }
 
-  .btn {
-    width: 20%;
-    padding: 2%;
-  }
-
   .food-search {
     padding: 10% 0;
   }
 
   .categories {
-    /* width: 10%; */
     margin-bottom: 0;
   }
   h2 {
@@ -299,23 +286,21 @@ h5 {
     margin: 4% auto;
     background-color: transparent;
   }
+  /* ------------------------------------------------------------------------------------------------------------------------ */
 
   .food-menu {
     padding: 10% 0;
   }
 
   .food-menu-box {
-    width: 90%;
+    width: 80%;
     padding: 5%;
     margin-bottom: 5%;
     background-color: white;
+    margin-right: auto;
+    margin-left: auto;
   }
-  .social {
-    padding: 5% 0;
-  }
-  .order {
-    width: 100%;
-  }
+
   .container1 {
     width: 90%;
     margin: auto;
@@ -337,5 +322,36 @@ h5 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+@media screen and (max-width: 1320px) and (min-width: 768px) {
+  .container2 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    padding: 1%;
+    display: flex;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    justify-content: space-around;
+  }
+
+  .img-responsive {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* -------------------------------------------------------------------------------------------------------------------------- */
+  .food-menu-box {
+    width: 450px;
+    height: 120px;
+    background-color: white;
+    border: 2px solid white;
+    text-align: center;
+    border-radius: 20px;
+    color: black;
+    margin-right: auto;
+    margin-left: auto;
   }
 }

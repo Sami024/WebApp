@@ -91,7 +91,7 @@
 
     <!-- fOOD MEnu Section Starts Here -->
     <section class="food-menu">
-        <h2 class="text-center">Food Menu</h2>
+        <h2 class="text-center">Menu</h2>
 
         <div class="container3">
             <?php
@@ -119,7 +119,7 @@
 
 
         </div>
-        <h1 style="color: green;" ><?php echo $searchError ?></h1>
+        <h1 style="color: green;text-align:center" ><?php echo $searchError ?></h1>
     </section>
 
     <!-- fOOD MEnu Section Ends Here -->
