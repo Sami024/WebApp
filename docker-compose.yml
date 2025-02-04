@@ -19,10 +19,10 @@ services:
     container_name: mysql_db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_ROOT_PASSWORD:
       MYSQL_DATABASE: restaurant
       MYSQL_USER: root
-      MYSQL_PASSWORD: 
+      MYSQL_PASSWORD: root  
     volumes:
       - db_data:/var/lib/mysql
 
