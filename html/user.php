@@ -107,7 +107,7 @@
 
 </head>
 <body>
-<h3 style="color: black;">Welkom je bent ingelogd als                                                                                                           <?php echo $_SESSION["username"] ?></h3>
+<h3 style="color: black;">Welkom je bent ingelogd als User                                                                                                           <?php echo $_SESSION["username"] ?></h3>
     <div class="add-items">
      <h1>Voeg items toe in Menu</h1>
     <form action="user.php" method="post">
