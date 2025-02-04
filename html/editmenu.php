@@ -59,7 +59,6 @@
             $stmt->bindParam(':dieet', $dieet);
             $stmt->bindParam(':prijs', $prijs);
             $stmt->execute();
-            echo "New records created successfully";
             header("Location: editmenu.php");
         } catch (PDOException $e) {
             echo "Error: Something went wrong " . $e->getMessage();
