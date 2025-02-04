@@ -1,7 +1,7 @@
 <?php
     $dsn        = 'mysql:host=localhost;dbname=restaurant';
     $dbusername = 'root';
-    $dbpassword = 'root';
+    $dbpassword = '';
 
     try {
         $pdo = new PDO($dsn, $dbusername, $dbpassword);

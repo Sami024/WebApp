@@ -2,7 +2,7 @@
     session_start();
     $dsn        = 'mysql:host=localhost;dbname=restaurant';
     $dbusername = 'root';
-    $dbpassword = 'root';
+    $dbpassword = '';
     $inlogError = "";
 
     try {
