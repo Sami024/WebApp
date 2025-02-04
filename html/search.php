@@ -42,9 +42,9 @@
     <section class="food-search text-center">
         <div class="container1">
 
-            <form action="search.php" method="POST">
+        <form action="search.php" method="POST">
                 <input type="search" name="search" placeholder="Vul in wat je wilt zoeken.." required>
-                <input type="submit"  value="Zoeken" class="zoeken">
+                <input type="submit" name="submit" value="Zoeken" class="searchbtn ">
             </form>
 
         </div>
@@ -55,29 +55,29 @@
     <section class="categories">
 
         <div class="container2">
-            <a href="pizza.php">
+            
                 <div class="box-3 ">
-                    <img src="images/pizza.jpg" alt="Pizza" class="img-responsive img-curve">
+                <a href="pizza.php"><img src="images/pizza.jpg" alt="Pizza" class="img-responsive img-curve"></a>
 
                     <h3 class="text-black">Pizza</h3>
                 </div>
-            </a>
+            
 
-            <a href="broodjes.php">
+           
                 <div class="box-3 ">
-                    <img src="images/doner-kebab-3-1080x960.jpg" alt="Broodje" class="img-responsive img-curve">
-
+                <a href="broodjes.php"><img src="images/doner-kebab-3-1080x960.jpg" alt="Broodje" class="img-responsive img-curve"> </a>
+                
                     <h3 class="text-black">Broodjes</h3>
                 </div>
-            </a>
+           
 
-            <a href="schotels.php">
+            
                 <div class="box-3 ">
-                    <img src="images/ribeye-steak-met-chilisaus-salade-noedels-mais-in-een-schotel-bovenaanzicht-op-donkere-achtergrond_689047-1919.avif" alt="Schotels" class="img-responsive img-curve">
+                <a href="schotels.php"><img src="images/ribeye-steak-met-chilisaus-salade-noedels-mais-in-een-schotel-bovenaanzicht-op-donkere-achtergrond_689047-1919.avif" alt="Schotels" class="img-responsive img-curve">
 
                     <h3 class="text-black ">Schotels</h3>
                 </div>
-            </a>
+            
 
         </div>
     </section>
