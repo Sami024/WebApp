@@ -20,7 +20,7 @@ if (($_SERVER["REQUEST_METHOD"] == "POST") && ($_POST['naam'] != "") && ($_POST[
         // prepare sql and bind parameters
         $stmt = $conn->prepare("INSERT INTO food (soort, naam,ingredienten,dieet,prijs) VALUES (:soort, :naam, :ingredienten, :dieet, :prijs)");
         $stmt->bindParam(':soort', $soort);
-        $stmt->bindParam(':naam', $naam);
+        $stmt->bindParam(':naam', );
         $stmt->bindParam(':ingredienten', $ingredienten);
         $stmt->bindParam(':dieet', $dieet);
         $stmt->bindParam(':prijs', $prijs);
